@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Inventory", "Project Inventory.csproj", "{621F3410-10BC-4144-8FC6-3FE47C44D3F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R9.DataBase", "..\..\..\Downloads\R9.DataBase\R9.DataBase.csproj", "{DF4C6F17-3DE1-4198-9476-6C4707BF89CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{621F3410-10BC-4144-8FC6-3FE47C44D3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621F3410-10BC-4144-8FC6-3FE47C44D3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621F3410-10BC-4144-8FC6-3FE47C44D3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621F3410-10BC-4144-8FC6-3FE47C44D3F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF4C6F17-3DE1-4198-9476-6C4707BF89CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF4C6F17-3DE1-4198-9476-6C4707BF89CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF4C6F17-3DE1-4198-9476-6C4707BF89CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF4C6F17-3DE1-4198-9476-6C4707BF89CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33CD184F-2044-445B-8E0C-F3C1E36B43A1}
+	EndGlobalSection
+EndGlobal
