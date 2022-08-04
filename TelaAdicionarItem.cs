@@ -18,28 +18,45 @@ namespace Project_Inventory
             InitializeComponent();
         }
 
+
+        private void TelaAdicionarItem_Load(object sender, EventArgs e)
+        {
+            //comboItem.Items.Insert(0, "Selecione...");
+            // TODO: esta linha de código carrega dados na tabela 'dblucianoDataSet.ItensCriados'. Você pode movê-la ou removê-la conforme necessário.
+            this.itensCriadosTableAdapter.Fill(this.dblucianoDataSet.ItensCriados);
+            if(comboItem.Text.Equals("Teste"))
+            {
+                comboItem.Text = "Selecione...";
+            }
+
+            comboQuantidade.Text = ("0");
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             ControleItems controle = new ControleItems();
 
             string item = comboItem.Text;
-            //int idItem = 
-            int quantidade = Int32.Parse(comboQuantidade.SelectedItem.ToString());
+            int quantidade = Int32.Parse(comboQuantidade.Text);
             string descricao = richTextBox1.Text;
 
-            Console.WriteLine(comboItem.SelectedValue);
+            if (item.Equals("Selecione...") && comboItem.SelectedValue == null || item.Equals("Selecione..."))
+            {
+                System.Windows.Forms.MessageBox.Show("Selecione um item antes de adicionar...");
+            }
+            else if (quantidade == 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Selecione ao menos uma quantidade antes de adicionar...");
+            }
+            else
+            {
+                int idItem = (int)comboItem.SelectedValue;
+                controle.AdicionarItem(item, quantidade, descricao, idItem);
+                Dispose();
+            }
 
-            controle.AdicionarItem(item, quantidade, descricao);
 
-            Dispose();
         }
-
-        private void TelaAdicionarItem_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'dblucianoDataSet.ItensCriados'. Você pode movê-la ou removê-la conforme necessário.
-            this.itensCriadosTableAdapter.Fill(this.dblucianoDataSet.ItensCriados);
-        }
-
-
     }
 }

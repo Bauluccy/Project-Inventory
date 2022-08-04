@@ -41,9 +41,11 @@ namespace Project_Inventory
             this.dblucianoDataSet = new Project_Inventory.dblucianoDataSet();
             this.itensCriadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itensCriadosTableAdapter = new Project_Inventory.dblucianoDataSetTableAdapters.ItensCriadosTableAdapter();
+            this.itensCriadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itensCriadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itensCriadosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +61,7 @@ namespace Project_Inventory
             // 
             // comboItem
             // 
-            this.comboItem.DataSource = this.itensCriadosBindingSource;
+            this.comboItem.DataSource = this.itensCriadosBindingSource1;
             this.comboItem.DisplayMember = "NOME_ITEM";
             this.comboItem.FormattingEnabled = true;
             this.comboItem.Location = new System.Drawing.Point(97, 26);
@@ -146,6 +148,11 @@ namespace Project_Inventory
             // 
             this.itensCriadosTableAdapter.ClearBeforeFill = true;
             // 
+            // itensCriadosBindingSource1
+            // 
+            this.itensCriadosBindingSource1.DataMember = "ItensCriados";
+            this.itensCriadosBindingSource1.DataSource = this.bindingSource1;
+            // 
             // TelaAdicionarItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +172,7 @@ namespace Project_Inventory
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itensCriadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itensCriadosBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +191,6 @@ namespace Project_Inventory
         private dblucianoDataSet dblucianoDataSet;
         private System.Windows.Forms.BindingSource itensCriadosBindingSource;
         private dblucianoDataSetTableAdapters.ItensCriadosTableAdapter itensCriadosTableAdapter;
+        private System.Windows.Forms.BindingSource itensCriadosBindingSource1;
     }
 }

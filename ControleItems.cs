@@ -39,7 +39,7 @@ namespace Project_Inventory
             var dadosInventario = Data.LoadAll<ChamaInventario>(contexto);
         }
 
-        public void AdicionarItem(string item, int quantidade, string descricao)
+        public void AdicionarItem(string item, int quantidade, string descricao, int idItem)
         {
             DataContext contexto = new DataContext("Data Source=192.168.0.176;Initial Catalog=dbluciano;User ID=siscob;Password=123456;");
 
@@ -50,7 +50,8 @@ namespace Project_Inventory
                 DESCRICAO = descricao,
                 QUANTIDADE = quantidade,
                 ENTRASAI = 1,
-                DATA = DateTime.Now
+                DATA = DateTime.Now,
+                ID_ITEM = idItem
             };
 
             adicionarItem.Save();
@@ -74,6 +75,8 @@ namespace Project_Inventory
             public int ENTRASAI { get; set; }
             [Column]
             public DateTime DATA { get; set; }
+            [Column]
+            public int ID_ITEM { get; set; }
         }
         
         
