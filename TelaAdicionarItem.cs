@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using R9.DataBase;
 
 namespace Project_Inventory
 {
@@ -22,27 +23,23 @@ namespace Project_Inventory
             ControleItems controle = new ControleItems();
 
             string item = comboItem.Text;
+            //int idItem = 
             int quantidade = Int32.Parse(comboQuantidade.SelectedItem.ToString());
             string descricao = richTextBox1.Text;
+
+            Console.WriteLine(comboItem.SelectedValue);
 
             controle.AdicionarItem(item, quantidade, descricao);
 
             Dispose();
         }
 
-
-        private void CarregaCombo()
-        {
-            //ControleItems controle = new ControleItems();
-            //controle.ListaItens();
-        }
-
         private void TelaAdicionarItem_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'dblucianoDataSet2.ItensCriados'. Você pode movê-la ou removê-la conforme necessário.
-            this.itensCriadosTableAdapter1.Fill(this.dblucianoDataSet2.ItensCriados);
-            // TODO: esta linha de código carrega dados na tabela 'dblucianoDataSet1.ItensCriados'. Você pode movê-la ou removê-la conforme necessário.
-            this.itensCriadosTableAdapter.Fill(this.dblucianoDataSet1.ItensCriados);
+            // TODO: esta linha de código carrega dados na tabela 'dblucianoDataSet.ItensCriados'. Você pode movê-la ou removê-la conforme necessário.
+            this.itensCriadosTableAdapter.Fill(this.dblucianoDataSet.ItensCriados);
         }
+
+
     }
 }

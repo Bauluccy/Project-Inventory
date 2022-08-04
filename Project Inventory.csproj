@@ -52,30 +52,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dblucianoDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dblucianoDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dblucianoDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="dblucianoDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dblucianoDataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dblucianoDataSet3.Designer.cs">
+    <Compile Include=".Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dblucianoDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dblucianoDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dblucianoDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dblucianoDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dblucianoDataSet5.xsd</DependentUpon>
+      <DependentUpon>.xsd</DependentUpon>
     </Compile>
     <Compile Include="TelaAdicionarItem.cs">
       <SubType>Form</SubType>
@@ -127,17 +112,6 @@
     <None Include="dblucianoDataSet.xss">
       <DependentUpon>dblucianoDataSet.xsd</DependentUpon>
     </None>
-    <None Include="dblucianoDataSet1.xsc">
-      <DependentUpon>dblucianoDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="dblucianoDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dblucianoDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dblucianoDataSet1.xss">
-      <DependentUpon>dblucianoDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="dblucianoDataSet2.xsc">
       <DependentUpon>dblucianoDataSet2.xsd</DependentUpon>
     </None>
@@ -149,38 +123,16 @@
     <None Include="dblucianoDataSet2.xss">
       <DependentUpon>dblucianoDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="dblucianoDataSet3.xsc">
-      <DependentUpon>dblucianoDataSet3.xsd</DependentUpon>
+    <None Include=".xsc">
+      <DependentUpon>.xsd</DependentUpon>
     </None>
-    <None Include="dblucianoDataSet3.xsd">
+    <None Include=".xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dblucianoDataSet3.Designer.cs</LastGenOutput>
+      <LastGenOutput>.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dblucianoDataSet3.xss">
-      <DependentUpon>dblucianoDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="dblucianoDataSet4.xsc">
-      <DependentUpon>dblucianoDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="dblucianoDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dblucianoDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dblucianoDataSet4.xss">
-      <DependentUpon>dblucianoDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="dblucianoDataSet5.xsc">
-      <DependentUpon>dblucianoDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="dblucianoDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dblucianoDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dblucianoDataSet5.xss">
-      <DependentUpon>dblucianoDataSet5.xsd</DependentUpon>
+    <None Include=".xss">
+      <DependentUpon>.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\Items.datasource" />
     <None Include="Properties\Settings.settings">

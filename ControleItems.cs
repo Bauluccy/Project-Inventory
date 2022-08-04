@@ -63,7 +63,7 @@ namespace Project_Inventory
         public class ChamaInventario : BaseModel
         {
             [ID]
-            public int ID_ITEM { get; set; }
+            public int ID { get; set; }
             [Column]
             public string ITEM { get; set; }
             [Column]

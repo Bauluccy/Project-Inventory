@@ -38,6 +38,10 @@ namespace Project_Inventory
         {
             ControleItems controleItems = new ControleItems();
             BindingSouceItems.DataSource = controleItems.ReceberItems();
+
+
+
+
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

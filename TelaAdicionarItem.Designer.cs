@@ -32,23 +32,18 @@ namespace Project_Inventory
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.comboItem = new System.Windows.Forms.ComboBox();
-            this.itensCriadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceItensCriados = new System.Windows.Forms.BindingSource(this.components);
-            this.dblucianoDataSet2 = new Project_Inventory.dblucianoDataSet2();
             this.comboQuantidade = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dblucianoDataSet1 = new Project_Inventory.dblucianoDataSet1();
-            this.itensCriadosTableAdapter = new Project_Inventory.dblucianoDataSet1TableAdapters.ItensCriadosTableAdapter();
-            this.itensCriadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.itensCriadosTableAdapter1 = new Project_Inventory.dblucianoDataSet2TableAdapters.ItensCriadosTableAdapter();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dblucianoDataSet = new Project_Inventory.dblucianoDataSet();
+            this.itensCriadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itensCriadosTableAdapter = new Project_Inventory.dblucianoDataSetTableAdapters.ItensCriadosTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itensCriadosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceItensCriados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itensCriadosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,22 +66,7 @@ namespace Project_Inventory
             this.comboItem.Name = "comboItem";
             this.comboItem.Size = new System.Drawing.Size(121, 21);
             this.comboItem.TabIndex = 1;
-            this.comboItem.ValueMember = "NOME_ITEM";
-            // 
-            // itensCriadosBindingSource
-            // 
-            this.itensCriadosBindingSource.DataMember = "ItensCriados";
-            this.itensCriadosBindingSource.DataSource = this.bindingSourceItensCriados;
-            // 
-            // bindingSourceItensCriados
-            // 
-            this.bindingSourceItensCriados.DataSource = this.dblucianoDataSet2;
-            this.bindingSourceItensCriados.Position = 0;
-            // 
-            // dblucianoDataSet2
-            // 
-            this.dblucianoDataSet2.DataSetName = "dblucianoDataSet2";
-            this.dblucianoDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.comboItem.ValueMember = "ID";
             // 
             // comboQuantidade
             // 
@@ -147,23 +127,24 @@ namespace Project_Inventory
             this.richTextBox1.TabIndex = 6;
             this.richTextBox1.Text = "";
             // 
-            // dblucianoDataSet1
+            // bindingSource1
             // 
-            this.dblucianoDataSet1.DataSetName = "dblucianoDataSet1";
-            this.dblucianoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bindingSource1.DataSource = this.dblucianoDataSet;
+            this.bindingSource1.Position = 0;
+            // 
+            // dblucianoDataSet
+            // 
+            this.dblucianoDataSet.DataSetName = "dblucianoDataSet";
+            this.dblucianoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // itensCriadosBindingSource
+            // 
+            this.itensCriadosBindingSource.DataMember = "ItensCriados";
+            this.itensCriadosBindingSource.DataSource = this.bindingSource1;
             // 
             // itensCriadosTableAdapter
             // 
             this.itensCriadosTableAdapter.ClearBeforeFill = true;
-            // 
-            // itensCriadosBindingSource1
-            // 
-            this.itensCriadosBindingSource1.DataMember = "ItensCriados";
-            this.itensCriadosBindingSource1.DataSource = this.bindingSourceItensCriados;
-            // 
-            // itensCriadosTableAdapter1
-            // 
-            this.itensCriadosTableAdapter1.ClearBeforeFill = true;
             // 
             // TelaAdicionarItem
             // 
@@ -181,11 +162,9 @@ namespace Project_Inventory
             this.Name = "TelaAdicionarItem";
             this.Text = "Adicionar Item";
             this.Load += new System.EventHandler(this.TelaAdicionarItem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itensCriadosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceItensCriados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itensCriadosBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,12 +179,9 @@ namespace Project_Inventory
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.BindingSource bindingSourceItensCriados;
-        private dblucianoDataSet1 dblucianoDataSet1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private dblucianoDataSet dblucianoDataSet;
         private System.Windows.Forms.BindingSource itensCriadosBindingSource;
-        private dblucianoDataSet1TableAdapters.ItensCriadosTableAdapter itensCriadosTableAdapter;
-        private dblucianoDataSet2 dblucianoDataSet2;
-        private System.Windows.Forms.BindingSource itensCriadosBindingSource1;
-        private dblucianoDataSet2TableAdapters.ItensCriadosTableAdapter itensCriadosTableAdapter1;
+        private dblucianoDataSetTableAdapters.ItensCriadosTableAdapter itensCriadosTableAdapter;
     }
 }
