@@ -52,6 +52,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dblucianoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dblucianoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dblucianoDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dblucianoDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -61,6 +66,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TelaLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaLog.Designer.cs">
+      <DependentUpon>TelaLog.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaAdicionarItem.cs">
       <SubType>Form</SubType>
@@ -101,6 +112,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TelaLog.resx">
+      <DependentUpon>TelaLog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="dblucianoDataSet.xsc">
       <DependentUpon>dblucianoDataSet.xsd</DependentUpon>
     </None>
@@ -111,6 +125,17 @@
     </None>
     <None Include="dblucianoDataSet.xss">
       <DependentUpon>dblucianoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dblucianoDataSet1.xsc">
+      <DependentUpon>dblucianoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dblucianoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dblucianoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dblucianoDataSet1.xss">
+      <DependentUpon>dblucianoDataSet1.xsd</DependentUpon>
     </None>
     <None Include="dblucianoDataSet2.xsc">
       <DependentUpon>dblucianoDataSet2.xsd</DependentUpon>

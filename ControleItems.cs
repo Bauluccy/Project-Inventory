@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,35 +10,22 @@ namespace Project_Inventory
 {
     class ControleItems
     {
+        //public void ReceberItens(List lista)
+        //{
+        //    DataContext contexto = new DataContext("Data Source=192.168.0.176;Initial Catalog=dbluciano;User ID=siscob;Password=123456;");
 
-        public List<Items> ReceberItems()
-        {
+        //    lista = Data.LoadAll<ChamaInventario>(contexto);
 
-            List<Items> items = new List<Items>();
-            items.Add(new Items()
-            {
-                //nomeItem = ,
-                //descricaoItem = "",
-                //quantidade = 1,
-                //entradaSaida = ,
-                ////dataItem = new DateTime(2022,07,29)
-            });
-
-            
-
-
-            return items; 
-        }
-
-        
-
-
-        public void Connect()
-        {
-            DataContext contexto = new DataContext("Data Source=192.168.0.176;Initial Catalog=dbluciano;User ID=siscob;Password=123456;");
-
-            var dadosInventario = Data.LoadAll<ChamaInventario>(contexto);
-        }
+        //    //List<Items> items = new List<Items>();
+        //    //items.Add(new Items()
+        //    //{
+        //    //    //nomeItem = ,
+        //    //    //descricaoItem = "",
+        //    //    //quantidade = 1,
+        //    //    //entradaSaida = ,
+        //    //    ////dataItem = new DateTime(2022,07,29)
+        //    //});
+        //}
 
         public void AdicionarItem(string item, int quantidade, string descricao, int idItem)
         {
@@ -60,7 +48,7 @@ namespace Project_Inventory
 
 
 
-        [Table("Inventario_TI")]
+        [Table("Log_Inventario_TI")]
         public class ChamaInventario : BaseModel
         {
             [ID]

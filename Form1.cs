@@ -36,17 +36,18 @@ namespace Project_Inventory
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ControleItems controleItems = new ControleItems();
-            BindingSouceItems.DataSource = controleItems.ReceberItems();
-
-
-
-
+            ControleItems controle = new ControleItems();
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TelaLog telalog = new TelaLog();
+            telalog.Show();
         }
     }
     
