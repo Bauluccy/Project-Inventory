@@ -1,7 +1,7 @@
 ﻿
 namespace Project_Inventory
 {
-    partial class Form1
+    partial class TelaInventarioTI
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -42,6 +42,7 @@ namespace Project_Inventory
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BindingSouceItems = new System.Windows.Forms.BindingSource(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -52,6 +53,7 @@ namespace Project_Inventory
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(58)))));
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -75,8 +77,7 @@ namespace Project_Inventory
             // 
             // button2
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.Location = new System.Drawing.Point(10, 275);
+            this.button2.Location = new System.Drawing.Point(10, 265);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(155, 50);
             this.button2.TabIndex = 1;
@@ -102,7 +103,7 @@ namespace Project_Inventory
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(175, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(441, 55);
+            this.panel2.Size = new System.Drawing.Size(444, 55);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -124,7 +125,7 @@ namespace Project_Inventory
             this.panel3.Location = new System.Drawing.Point(175, 55);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20);
-            this.panel3.Size = new System.Drawing.Size(441, 290);
+            this.panel3.Size = new System.Drawing.Size(444, 290);
             this.panel3.TabIndex = 2;
             // 
             // dataGridView1
@@ -155,10 +156,19 @@ namespace Project_Inventory
             this.dataGridView1.RowHeadersVisible = false;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Size = new System.Drawing.Size(401, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(404, 250);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Form1
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(10, 195);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(155, 50);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Descarte";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // TelaInventarioTI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,7 +177,7 @@ namespace Project_Inventory
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "TelaInventarioTI";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -191,6 +201,7 @@ namespace Project_Inventory
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4;
     }
 }
 

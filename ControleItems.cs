@@ -8,7 +8,7 @@ using R9.DataBase;
 
 namespace Project_Inventory
 {
-    class ControleItems
+    public static class ControleItems
     {
         //public void ReceberItens(List lista)
         //{
@@ -27,11 +27,11 @@ namespace Project_Inventory
         //    //});
         //}
 
-        public void AdicionarItem(string item, int quantidade, string descricao, int idItem)
+        public static void AdicionarItem(string item, int quantidade, string descricao, int idItem)
         {
             DataContext contexto = new DataContext("Data Source=192.168.0.176;Initial Catalog=dbluciano;User ID=siscob;Password=123456;");
 
-            var adicionarItem = new ChamaInventario()
+            var adicionarItem = new ItemInventário()
             {
                 Context = contexto,
                 ITEM = item,
@@ -49,7 +49,7 @@ namespace Project_Inventory
 
 
         [Table("Log_Inventario_TI")]
-        public class ChamaInventario : BaseModel
+        public class ItemInventário : BaseModel
         {
             [ID]
             public int ID { get; set; }
@@ -71,8 +71,14 @@ namespace Project_Inventory
         
         
         
-        
-        public void CriarItem(string valor)
+        //public string FiltrarItem()
+        //{
+        //    DataContext contexto = new DataContext("Data Source=192.168.0.176;Initial Catalog=dbluciano;User ID=siscob;Password=123456;");
+
+        //    var filtros = Data.LoadAll<ChamaItensCriados>(contexto, "(ID = comboTipo.SelectedValue)");
+        //    return filtros.ToString();
+        //}
+        public static void CriarItem(string valor)
         {
             DataContext contexto = new DataContext("Data Source=192.168.0.176;Initial Catalog=dbluciano;User ID=siscob;Password=123456;");
 
@@ -93,6 +99,22 @@ namespace Project_Inventory
             [Column]
             public string NOME_ITEM { get; set; }
         }
+
+
+        public static List<ItemInventário> BuscarTudo()
+        {
+            DataContext contexto = new DataContext("Data Source=192.168.0.176;Initial Catalog=dbluciano;User ID=siscob;Password=123456;");
+
+            return Data.LoadAll<ItemInventário>(contexto);
+        }
+
+        public static List<ItemInventário> BuscarPorTipo(int IdTipo)
+        {
+            DataContext contexto = new DataContext("Data Source=192.168.0.176;Initial Catalog=dbluciano;User ID=siscob;Password=123456;");
+
+            return Data.LoadAll<ItemInventário>(contexto, "ID_ITEM = " + IdTipo);
+        }
+
     } 
     
 }

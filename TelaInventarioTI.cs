@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project_Inventory
 {
-    public partial class Form1 : Form
+    public partial class TelaInventarioTI : Form
     {
-        public Form1()
+        public TelaInventarioTI()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace Project_Inventory
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ControleItems controle = new ControleItems();
+            
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

@@ -35,8 +35,6 @@ namespace Project_Inventory
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ControleItems controle = new ControleItems();
-
             string item = comboItem.Text;
             int quantidade = Int32.Parse(comboQuantidade.Text);
             string descricao = richTextBox1.Text;
@@ -52,7 +50,7 @@ namespace Project_Inventory
             else
             {
                 int idItem = (int)comboItem.SelectedValue;
-                controle.AdicionarItem(item, quantidade, descricao, idItem);
+                ControleItems.AdicionarItem(item, quantidade, descricao, idItem);
                 Dispose();
             }
 

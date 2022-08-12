@@ -24,11 +24,10 @@ namespace Project_Inventory
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            ControleItems controle = new ControleItems();
+        {   
             novoItem = textBox1.Text;
 
-            controle.CriarItem(novoItem);
+            ControleItems.CriarItem(novoItem);
             Dispose();
         }
     }
