@@ -20,17 +20,17 @@ namespace Project_Inventory {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dblucianoDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dblucianoDataSet5")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dblucianoDataSet1 : global::System.Data.DataSet {
+    public partial class dblucianoDataSet5 : global::System.Data.DataSet {
         
-        private Log_Inventario_TIDataTable tableLog_Inventario_TI;
+        private ItensSeparadosPorIDDataTable tableItensSeparadosPorID;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public dblucianoDataSet1() {
+        public dblucianoDataSet5() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Project_Inventory {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected dblucianoDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dblucianoDataSet5(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Project_Inventory {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Log_Inventario_TI"] != null)) {
-                    base.Tables.Add(new Log_Inventario_TIDataTable(ds.Tables["Log_Inventario_TI"]));
+                if ((ds.Tables["ItensSeparadosPorID"] != null)) {
+                    base.Tables.Add(new ItensSeparadosPorIDDataTable(ds.Tables["ItensSeparadosPorID"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Project_Inventory {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Log_Inventario_TIDataTable Log_Inventario_TI {
+        public ItensSeparadosPorIDDataTable ItensSeparadosPorID {
             get {
-                return this.tableLog_Inventario_TI;
+                return this.tableItensSeparadosPorID;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Project_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dblucianoDataSet1 cln = ((dblucianoDataSet1)(base.Clone()));
+            dblucianoDataSet5 cln = ((dblucianoDataSet5)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Project_Inventory {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Log_Inventario_TI"] != null)) {
-                    base.Tables.Add(new Log_Inventario_TIDataTable(ds.Tables["Log_Inventario_TI"]));
+                if ((ds.Tables["ItensSeparadosPorID"] != null)) {
+                    base.Tables.Add(new ItensSeparadosPorIDDataTable(ds.Tables["ItensSeparadosPorID"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Project_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableLog_Inventario_TI = ((Log_Inventario_TIDataTable)(base.Tables["Log_Inventario_TI"]));
+            this.tableItensSeparadosPorID = ((ItensSeparadosPorIDDataTable)(base.Tables["ItensSeparadosPorID"]));
             if ((initTable == true)) {
-                if ((this.tableLog_Inventario_TI != null)) {
-                    this.tableLog_Inventario_TI.InitVars();
+                if ((this.tableItensSeparadosPorID != null)) {
+                    this.tableItensSeparadosPorID.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Project_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dblucianoDataSet1";
+            this.DataSetName = "dblucianoDataSet5";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dblucianoDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/dblucianoDataSet5.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableLog_Inventario_TI = new Log_Inventario_TIDataTable();
-            base.Tables.Add(this.tableLog_Inventario_TI);
+            this.tableItensSeparadosPorID = new ItensSeparadosPorIDDataTable();
+            base.Tables.Add(this.tableItensSeparadosPorID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeLog_Inventario_TI() {
+        private bool ShouldSerializeItensSeparadosPorID() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Project_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dblucianoDataSet1 ds = new dblucianoDataSet1();
+            dblucianoDataSet5 ds = new dblucianoDataSet5();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,33 +270,25 @@ namespace Project_Inventory {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void Log_Inventario_TIRowChangeEventHandler(object sender, Log_Inventario_TIRowChangeEvent e);
+        public delegate void ItensSeparadosPorIDRowChangeEventHandler(object sender, ItensSeparadosPorIDRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Log_Inventario_TIDataTable : global::System.Data.TypedTableBase<Log_Inventario_TIRow> {
-            
-            private global::System.Data.DataColumn columnID;
-            
-            private global::System.Data.DataColumn columnITEM;
-            
-            private global::System.Data.DataColumn columnDESCRICAO;
-            
-            private global::System.Data.DataColumn columnQUANTIDADE;
-            
-            private global::System.Data.DataColumn columnENTRASAI;
-            
-            private global::System.Data.DataColumn columnDATA;
+        public partial class ItensSeparadosPorIDDataTable : global::System.Data.TypedTableBase<ItensSeparadosPorIDRow> {
             
             private global::System.Data.DataColumn columnID_ITEM;
             
+            private global::System.Data.DataColumn columnITEM;
+            
+            private global::System.Data.DataColumn columnQUANTIDADE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Log_Inventario_TIDataTable() {
-                this.TableName = "Log_Inventario_TI";
+            public ItensSeparadosPorIDDataTable() {
+                this.TableName = "ItensSeparadosPorID";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -304,7 +296,7 @@ namespace Project_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal Log_Inventario_TIDataTable(global::System.Data.DataTable table) {
+            internal ItensSeparadosPorIDDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -321,16 +313,16 @@ namespace Project_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected Log_Inventario_TIDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ItensSeparadosPorIDDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn ID_ITEMColumn {
                 get {
-                    return this.columnID;
+                    return this.columnID_ITEM;
                 }
             }
             
@@ -344,41 +336,9 @@ namespace Project_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DESCRICAOColumn {
-                get {
-                    return this.columnDESCRICAO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn QUANTIDADEColumn {
                 get {
                     return this.columnQUANTIDADE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ENTRASAIColumn {
-                get {
-                    return this.columnENTRASAI;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DATAColumn {
-                get {
-                    return this.columnDATA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ID_ITEMColumn {
-                get {
-                    return this.columnID_ITEM;
                 }
             }
             
@@ -393,58 +353,47 @@ namespace Project_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Log_Inventario_TIRow this[int index] {
+            public ItensSeparadosPorIDRow this[int index] {
                 get {
-                    return ((Log_Inventario_TIRow)(this.Rows[index]));
+                    return ((ItensSeparadosPorIDRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Log_Inventario_TIRowChangeEventHandler Log_Inventario_TIRowChanging;
+            public event ItensSeparadosPorIDRowChangeEventHandler ItensSeparadosPorIDRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Log_Inventario_TIRowChangeEventHandler Log_Inventario_TIRowChanged;
+            public event ItensSeparadosPorIDRowChangeEventHandler ItensSeparadosPorIDRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Log_Inventario_TIRowChangeEventHandler Log_Inventario_TIRowDeleting;
+            public event ItensSeparadosPorIDRowChangeEventHandler ItensSeparadosPorIDRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Log_Inventario_TIRowChangeEventHandler Log_Inventario_TIRowDeleted;
+            public event ItensSeparadosPorIDRowChangeEventHandler ItensSeparadosPorIDRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddLog_Inventario_TIRow(Log_Inventario_TIRow row) {
+            public void AddItensSeparadosPorIDRow(ItensSeparadosPorIDRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Log_Inventario_TIRow AddLog_Inventario_TIRow(string ITEM, string DESCRICAO, int QUANTIDADE, int ENTRASAI, System.DateTime DATA, int ID_ITEM) {
-                Log_Inventario_TIRow rowLog_Inventario_TIRow = ((Log_Inventario_TIRow)(this.NewRow()));
+            public ItensSeparadosPorIDRow AddItensSeparadosPorIDRow(int ID_ITEM, string ITEM, int QUANTIDADE) {
+                ItensSeparadosPorIDRow rowItensSeparadosPorIDRow = ((ItensSeparadosPorIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        ID_ITEM,
                         ITEM,
-                        DESCRICAO,
-                        QUANTIDADE,
-                        ENTRASAI,
-                        DATA,
-                        ID_ITEM};
-                rowLog_Inventario_TIRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowLog_Inventario_TIRow);
-                return rowLog_Inventario_TIRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Log_Inventario_TIRow FindByID(int ID) {
-                return ((Log_Inventario_TIRow)(this.Rows.Find(new object[] {
-                            ID})));
+                        QUANTIDADE};
+                rowItensSeparadosPorIDRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowItensSeparadosPorIDRow);
+                return rowItensSeparadosPorIDRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Log_Inventario_TIDataTable cln = ((Log_Inventario_TIDataTable)(base.Clone()));
+                ItensSeparadosPorIDDataTable cln = ((ItensSeparadosPorIDDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -452,77 +401,55 @@ namespace Project_Inventory {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Log_Inventario_TIDataTable();
+                return new ItensSeparadosPorIDDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
-                this.columnITEM = base.Columns["ITEM"];
-                this.columnDESCRICAO = base.Columns["DESCRICAO"];
-                this.columnQUANTIDADE = base.Columns["QUANTIDADE"];
-                this.columnENTRASAI = base.Columns["ENTRASAI"];
-                this.columnDATA = base.Columns["DATA"];
                 this.columnID_ITEM = base.Columns["ID_ITEM"];
+                this.columnITEM = base.Columns["ITEM"];
+                this.columnQUANTIDADE = base.Columns["QUANTIDADE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
-                this.columnITEM = new global::System.Data.DataColumn("ITEM", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnITEM);
-                this.columnDESCRICAO = new global::System.Data.DataColumn("DESCRICAO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDESCRICAO);
-                this.columnQUANTIDADE = new global::System.Data.DataColumn("QUANTIDADE", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQUANTIDADE);
-                this.columnENTRASAI = new global::System.Data.DataColumn("ENTRASAI", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnENTRASAI);
-                this.columnDATA = new global::System.Data.DataColumn("DATA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDATA);
                 this.columnID_ITEM = new global::System.Data.DataColumn("ID_ITEM", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_ITEM);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = 1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
+                this.columnITEM = new global::System.Data.DataColumn("ITEM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnITEM);
+                this.columnQUANTIDADE = new global::System.Data.DataColumn("QUANTIDADE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQUANTIDADE);
+                this.columnID_ITEM.AllowDBNull = false;
                 this.columnITEM.AllowDBNull = false;
                 this.columnITEM.MaxLength = 255;
-                this.columnDESCRICAO.MaxLength = 255;
-                this.columnQUANTIDADE.AllowDBNull = false;
-                this.columnENTRASAI.AllowDBNull = false;
-                this.columnDATA.AllowDBNull = false;
-                this.columnID_ITEM.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Log_Inventario_TIRow NewLog_Inventario_TIRow() {
-                return ((Log_Inventario_TIRow)(this.NewRow()));
+            public ItensSeparadosPorIDRow NewItensSeparadosPorIDRow() {
+                return ((ItensSeparadosPorIDRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Log_Inventario_TIRow(builder);
+                return new ItensSeparadosPorIDRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Log_Inventario_TIRow);
+                return typeof(ItensSeparadosPorIDRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Log_Inventario_TIRowChanged != null)) {
-                    this.Log_Inventario_TIRowChanged(this, new Log_Inventario_TIRowChangeEvent(((Log_Inventario_TIRow)(e.Row)), e.Action));
+                if ((this.ItensSeparadosPorIDRowChanged != null)) {
+                    this.ItensSeparadosPorIDRowChanged(this, new ItensSeparadosPorIDRowChangeEvent(((ItensSeparadosPorIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -530,8 +457,8 @@ namespace Project_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Log_Inventario_TIRowChanging != null)) {
-                    this.Log_Inventario_TIRowChanging(this, new Log_Inventario_TIRowChangeEvent(((Log_Inventario_TIRow)(e.Row)), e.Action));
+                if ((this.ItensSeparadosPorIDRowChanging != null)) {
+                    this.ItensSeparadosPorIDRowChanging(this, new ItensSeparadosPorIDRowChangeEvent(((ItensSeparadosPorIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -539,8 +466,8 @@ namespace Project_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Log_Inventario_TIRowDeleted != null)) {
-                    this.Log_Inventario_TIRowDeleted(this, new Log_Inventario_TIRowChangeEvent(((Log_Inventario_TIRow)(e.Row)), e.Action));
+                if ((this.ItensSeparadosPorIDRowDeleted != null)) {
+                    this.ItensSeparadosPorIDRowDeleted(this, new ItensSeparadosPorIDRowChangeEvent(((ItensSeparadosPorIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -548,14 +475,14 @@ namespace Project_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Log_Inventario_TIRowDeleting != null)) {
-                    this.Log_Inventario_TIRowDeleting(this, new Log_Inventario_TIRowChangeEvent(((Log_Inventario_TIRow)(e.Row)), e.Action));
+                if ((this.ItensSeparadosPorIDRowDeleting != null)) {
+                    this.ItensSeparadosPorIDRowDeleting(this, new ItensSeparadosPorIDRowChangeEvent(((ItensSeparadosPorIDRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveLog_Inventario_TIRow(Log_Inventario_TIRow row) {
+            public void RemoveItensSeparadosPorIDRow(ItensSeparadosPorIDRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -564,7 +491,7 @@ namespace Project_Inventory {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dblucianoDataSet1 ds = new dblucianoDataSet1();
+                dblucianoDataSet5 ds = new dblucianoDataSet5();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -582,7 +509,7 @@ namespace Project_Inventory {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Log_Inventario_TIDataTable";
+                attribute2.FixedValue = "ItensSeparadosPorIDDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -626,25 +553,25 @@ namespace Project_Inventory {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Log_Inventario_TIRow : global::System.Data.DataRow {
+        public partial class ItensSeparadosPorIDRow : global::System.Data.DataRow {
             
-            private Log_Inventario_TIDataTable tableLog_Inventario_TI;
+            private ItensSeparadosPorIDDataTable tableItensSeparadosPorID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal Log_Inventario_TIRow(global::System.Data.DataRowBuilder rb) : 
+            internal ItensSeparadosPorIDRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableLog_Inventario_TI = ((Log_Inventario_TIDataTable)(this.Table));
+                this.tableItensSeparadosPorID = ((ItensSeparadosPorIDDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID {
+            public int ID_ITEM {
                 get {
-                    return ((int)(this[this.tableLog_Inventario_TI.IDColumn]));
+                    return ((int)(this[this.tableItensSeparadosPorID.ID_ITEMColumn]));
                 }
                 set {
-                    this[this.tableLog_Inventario_TI.IDColumn] = value;
+                    this[this.tableItensSeparadosPorID.ID_ITEMColumn] = value;
                 }
             }
             
@@ -652,26 +579,10 @@ namespace Project_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ITEM {
                 get {
-                    return ((string)(this[this.tableLog_Inventario_TI.ITEMColumn]));
+                    return ((string)(this[this.tableItensSeparadosPorID.ITEMColumn]));
                 }
                 set {
-                    this[this.tableLog_Inventario_TI.ITEMColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DESCRICAO {
-                get {
-                    try {
-                        return ((string)(this[this.tableLog_Inventario_TI.DESCRICAOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'DESCRICAO\' na tabela \'Log_Inventario_TI\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLog_Inventario_TI.DESCRICAOColumn] = value;
+                    this[this.tableItensSeparadosPorID.ITEMColumn] = value;
                 }
             }
             
@@ -679,56 +590,28 @@ namespace Project_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int QUANTIDADE {
                 get {
-                    return ((int)(this[this.tableLog_Inventario_TI.QUANTIDADEColumn]));
+                    try {
+                        return ((int)(this[this.tableItensSeparadosPorID.QUANTIDADEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'QUANTIDADE\' na tabela \'ItensSeparadosPorID\' é DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableLog_Inventario_TI.QUANTIDADEColumn] = value;
+                    this[this.tableItensSeparadosPorID.QUANTIDADEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ENTRASAI {
-                get {
-                    return ((int)(this[this.tableLog_Inventario_TI.ENTRASAIColumn]));
-                }
-                set {
-                    this[this.tableLog_Inventario_TI.ENTRASAIColumn] = value;
-                }
+            public bool IsQUANTIDADENull() {
+                return this.IsNull(this.tableItensSeparadosPorID.QUANTIDADEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime DATA {
-                get {
-                    return ((global::System.DateTime)(this[this.tableLog_Inventario_TI.DATAColumn]));
-                }
-                set {
-                    this[this.tableLog_Inventario_TI.DATAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID_ITEM {
-                get {
-                    return ((int)(this[this.tableLog_Inventario_TI.ID_ITEMColumn]));
-                }
-                set {
-                    this[this.tableLog_Inventario_TI.ID_ITEMColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDESCRICAONull() {
-                return this.IsNull(this.tableLog_Inventario_TI.DESCRICAOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDESCRICAONull() {
-                this[this.tableLog_Inventario_TI.DESCRICAOColumn] = global::System.Convert.DBNull;
+            public void SetQUANTIDADENull() {
+                this[this.tableItensSeparadosPorID.QUANTIDADEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -736,22 +619,22 @@ namespace Project_Inventory {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class Log_Inventario_TIRowChangeEvent : global::System.EventArgs {
+        public class ItensSeparadosPorIDRowChangeEvent : global::System.EventArgs {
             
-            private Log_Inventario_TIRow eventRow;
+            private ItensSeparadosPorIDRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Log_Inventario_TIRowChangeEvent(Log_Inventario_TIRow row, global::System.Data.DataRowAction action) {
+            public ItensSeparadosPorIDRowChangeEvent(ItensSeparadosPorIDRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Log_Inventario_TIRow Row {
+            public ItensSeparadosPorIDRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -767,7 +650,7 @@ namespace Project_Inventory {
         }
     }
 }
-namespace Project_Inventory.dblucianoDataSet1TableAdapters {
+namespace Project_Inventory.dblucianoDataSet5TableAdapters {
     
     
     /// <summary>
@@ -779,7 +662,7 @@ namespace Project_Inventory.dblucianoDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Log_Inventario_TITableAdapter : global::System.ComponentModel.Component {
+    public partial class ItensSeparadosPorIDTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -793,7 +676,7 @@ namespace Project_Inventory.dblucianoDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public Log_Inventario_TITableAdapter() {
+        public ItensSeparadosPorIDTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -890,59 +773,11 @@ namespace Project_Inventory.dblucianoDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Log_Inventario_TI";
-            tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("ITEM", "ITEM");
-            tableMapping.ColumnMappings.Add("DESCRICAO", "DESCRICAO");
-            tableMapping.ColumnMappings.Add("QUANTIDADE", "QUANTIDADE");
-            tableMapping.ColumnMappings.Add("ENTRASAI", "ENTRASAI");
-            tableMapping.ColumnMappings.Add("DATA", "DATA");
+            tableMapping.DataSetTable = "ItensSeparadosPorID";
             tableMapping.ColumnMappings.Add("ID_ITEM", "ID_ITEM");
+            tableMapping.ColumnMappings.Add("ITEM", "ITEM");
+            tableMapping.ColumnMappings.Add("QUANTIDADE", "QUANTIDADE");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Log_Inventario_TI] WHERE (([ID] = @Original_ID) AND ([ITEM] = @Original_ITEM) AND ((@IsNull_DESCRICAO = 1 AND [DESCRICAO] IS NULL) OR ([DESCRICAO] = @Original_DESCRICAO)) AND ([QUANTIDADE] = @Original_QUANTIDADE) AND ([ENTRASAI] = @Original_ENTRASAI) AND ([DATA] = @Original_DATA) AND ([ID_ITEM] = @Original_ID_ITEM))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ITEM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DESCRICAO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCRICAO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESCRICAO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCRICAO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QUANTIDADE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QUANTIDADE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ENTRASAI", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTRASAI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_ITEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Log_Inventario_TI] ([ID], [ITEM], [DESCRICAO], [QUANTIDADE], [ENTRASAI], [DATA], [ID_ITEM]) VALUES (@ID, @ITEM, @DESCRICAO, @QUANTIDADE, @ENTRASAI, @DATA, @ID_ITEM);
-SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventario_TI WHERE (ID = @ID)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ITEM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESCRICAO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCRICAO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QUANTIDADE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QUANTIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ENTRASAI", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTRASAI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_ITEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Log_Inventario_TI] SET [ID] = @ID, [ITEM] = @ITEM, [DESCRICAO] = @DESCRICAO, [QUANTIDADE] = @QUANTIDADE, [ENTRASAI] = @ENTRASAI, [DATA] = @DATA, [ID_ITEM] = @ID_ITEM WHERE (([ID] = @Original_ID) AND ([ITEM] = @Original_ITEM) AND ((@IsNull_DESCRICAO = 1 AND [DESCRICAO] IS NULL) OR ([DESCRICAO] = @Original_DESCRICAO)) AND ([QUANTIDADE] = @Original_QUANTIDADE) AND ([ENTRASAI] = @Original_ENTRASAI) AND ([DATA] = @Original_DATA) AND ([ID_ITEM] = @Original_ID_ITEM));
-SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventario_TI WHERE (ID = @ID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ITEM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESCRICAO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCRICAO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QUANTIDADE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QUANTIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ENTRASAI", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTRASAI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_ITEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ITEM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DESCRICAO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCRICAO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESCRICAO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCRICAO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QUANTIDADE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QUANTIDADE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ENTRASAI", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTRASAI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_ITEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -955,25 +790,18 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM\r\nFROM     " +
-                "       Log_Inventario_TI";
+            this._commandCollection[0].CommandText = "SELECT ID_ITEM, ITEM, QUANTIDADE FROM dbo.ItensSeparadosPorID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT DATA, DESCRICAO, ENTRASAI, ID_ITEM, ITEM, QUANTIDADE FROM Log_Inventario_T" +
-                "I WHERE (ID_ITEM = @IdTipo)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdTipo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dblucianoDataSet1.Log_Inventario_TIDataTable dataTable) {
+        public virtual int Fill(dblucianoDataSet5.ItensSeparadosPorIDDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -986,209 +814,11 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dblucianoDataSet1.Log_Inventario_TIDataTable GetData() {
+        public virtual dblucianoDataSet5.ItensSeparadosPorIDDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dblucianoDataSet1.Log_Inventario_TIDataTable dataTable = new dblucianoDataSet1.Log_Inventario_TIDataTable();
+            dblucianoDataSet5.ItensSeparadosPorIDDataTable dataTable = new dblucianoDataSet5.ItensSeparadosPorIDDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByTipo(dblucianoDataSet1.Log_Inventario_TIDataTable dataTable, int IdTipo) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdTipo));
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual dblucianoDataSet1.Log_Inventario_TIDataTable GetDataByTipo(int IdTipo) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdTipo));
-            dblucianoDataSet1.Log_Inventario_TIDataTable dataTable = new dblucianoDataSet1.Log_Inventario_TIDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dblucianoDataSet1.Log_Inventario_TIDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dblucianoDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Log_Inventario_TI");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_ITEM, string Original_DESCRICAO, int Original_QUANTIDADE, int Original_ENTRASAI, System.DateTime Original_DATA, int Original_ID_ITEM) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_ITEM == null)) {
-                throw new global::System.ArgumentNullException("Original_ITEM");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_ITEM));
-            }
-            if ((Original_DESCRICAO == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_DESCRICAO));
-            }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_QUANTIDADE));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_ENTRASAI));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_DATA));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_ID_ITEM));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, string ITEM, string DESCRICAO, int QUANTIDADE, int ENTRASAI, System.DateTime DATA, int ID_ITEM) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
-            if ((ITEM == null)) {
-                throw new global::System.ArgumentNullException("ITEM");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ITEM));
-            }
-            if ((DESCRICAO == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(DESCRICAO));
-            }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(QUANTIDADE));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(ENTRASAI));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(DATA));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(ID_ITEM));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID, string ITEM, string DESCRICAO, int QUANTIDADE, int ENTRASAI, System.DateTime DATA, int ID_ITEM, int Original_ID, string Original_ITEM, string Original_DESCRICAO, int Original_QUANTIDADE, int Original_ENTRASAI, System.DateTime Original_DATA, int Original_ID_ITEM) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
-            if ((ITEM == null)) {
-                throw new global::System.ArgumentNullException("ITEM");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ITEM));
-            }
-            if ((DESCRICAO == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(DESCRICAO));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(QUANTIDADE));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ENTRASAI));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(DATA));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(ID_ITEM));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ID));
-            if ((Original_ITEM == null)) {
-                throw new global::System.ArgumentNullException("Original_ITEM");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_ITEM));
-            }
-            if ((Original_DESCRICAO == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_DESCRICAO));
-            }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_QUANTIDADE));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_ENTRASAI));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_DATA));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_ID_ITEM));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ITEM, string DESCRICAO, int QUANTIDADE, int ENTRASAI, System.DateTime DATA, int ID_ITEM, int Original_ID, string Original_ITEM, string Original_DESCRICAO, int Original_QUANTIDADE, int Original_ENTRASAI, System.DateTime Original_DATA, int Original_ID_ITEM) {
-            return this.Update(Original_ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM, Original_ID, Original_ITEM, Original_DESCRICAO, Original_QUANTIDADE, Original_ENTRASAI, Original_DATA, Original_ID_ITEM);
         }
     }
     
@@ -1204,8 +834,6 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         
         private UpdateOrderOption _updateOrder;
         
-        private Log_Inventario_TITableAdapter _log_Inventario_TITableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1218,20 +846,6 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public Log_Inventario_TITableAdapter Log_Inventario_TITableAdapter {
-            get {
-                return this._log_Inventario_TITableAdapter;
-            }
-            set {
-                this._log_Inventario_TITableAdapter = value;
             }
         }
         
@@ -1254,10 +868,6 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._log_Inventario_TITableAdapter != null) 
-                            && (this._log_Inventario_TITableAdapter.Connection != null))) {
-                    return this._log_Inventario_TITableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1271,9 +881,6 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._log_Inventario_TITableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1283,17 +890,8 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(dblucianoDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dblucianoDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._log_Inventario_TITableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Log_Inventario_TI.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._log_Inventario_TITableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1302,16 +900,8 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(dblucianoDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dblucianoDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._log_Inventario_TITableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Log_Inventario_TI.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._log_Inventario_TITableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1320,16 +910,8 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(dblucianoDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dblucianoDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._log_Inventario_TITableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Log_Inventario_TI.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._log_Inventario_TITableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1362,17 +944,12 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(dblucianoDataSet1 dataSet) {
+        public virtual int UpdateAll(dblucianoDataSet5 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._log_Inventario_TITableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._log_Inventario_TITableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
-                        "cadeia de conexão.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1406,15 +983,6 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._log_Inventario_TITableAdapter != null)) {
-                    revertConnections.Add(this._log_Inventario_TITableAdapter, this._log_Inventario_TITableAdapter.Connection);
-                    this._log_Inventario_TITableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._log_Inventario_TITableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._log_Inventario_TITableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._log_Inventario_TITableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._log_Inventario_TITableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1472,10 +1040,6 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._log_Inventario_TITableAdapter != null)) {
-                    this._log_Inventario_TITableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._log_Inventario_TITableAdapter]));
-                    this._log_Inventario_TITableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

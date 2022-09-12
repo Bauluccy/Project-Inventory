@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DGVPrinterHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Project_Inventory
 {
@@ -36,7 +38,8 @@ namespace Project_Inventory
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            // TODO: esta linha de código carrega dados na tabela 'dblucianoDataSet5.ItensSeparadosPorID'. Você pode movê-la ou removê-la conforme necessário.
+            this.itensSeparadosPorIDTableAdapter.Fill(this.dblucianoDataSet5.ItensSeparadosPorID);
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -48,6 +51,80 @@ namespace Project_Inventory
         {
             TelaLog telalog = new TelaLog();
             telalog.Show();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            Excel.Application app;
+            Excel.Workbook workbook;
+            Excel.Worksheet worksheet;
+            object missValue = System.Reflection.Missing.Value;
+
+            app = new Excel.Application();
+            workbook = app.Workbooks.Add(missValue);
+            worksheet = (Excel.Worksheet)workbook.Worksheets.get_Item(1);
+            int i = 0;
+            int j = 0;
+
+
+            for (int c = 1; c < dataGridView1.Columns.Count + 1; c++)
+            {
+                worksheet.Cells[1, c] = dataGridView1.Columns[c - 1].HeaderText;
+            }
+
+
+            for (i = 0; i <= dataGridView1.RowCount - 1; i++)
+            {
+                for (j = 0; j <= dataGridView1.ColumnCount - 1; j++)
+                {
+                    DataGridViewCell cell = dataGridView1[j, i];
+                    worksheet.Cells[i + 2, j + 1] = cell.Value;
+                }
+            }
+            saveFileDialog.Title = "ExportLogFilter";
+            saveFileDialog.Filter = "Arquivo do Excel *.xlsx | *.xlsx";
+            saveFileDialog.ShowDialog();
+
+            workbook.SaveAs(saveFileDialog.FileName, Excel.XlFileFormat.xlOpenXMLWorkbook, missValue, missValue, missValue, missValue,
+            Excel.XlSaveAsAccessMode.xlExclusive, missValue, missValue, missValue, missValue, missValue);
+            workbook.Close(true, missValue, missValue);
+            app.Quit();
+
+            MessageBox.Show("Success");
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            this.printDocument1.DefaultPageSettings.Landscape = true;
+            DGVPrinter printer = new DGVPrinter();
+
+            printer.PrintPreviewDataGridView(dataGridView1);
+        }
+
+        private void TelaInventarioTI_Activated(object sender, EventArgs e)
+        {
+            this.itensSeparadosPorIDTableAdapter.Fill(this.dblucianoDataSet5.ItensSeparadosPorID);
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var x = dataGridView1.CurrentCellAddress.X;
+            var item = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            var valor = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            var id = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+
+            TelaAlterar telaAlterar = new TelaAlterar(item,valor,id);
+            telaAlterar.Show();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TelaDescartes telaDescartes = new TelaDescartes();
+            telaDescartes.Show();
         }
     }
     

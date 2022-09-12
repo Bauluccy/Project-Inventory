@@ -142,15 +142,15 @@
   <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHSSURBVGhD7ZkxTkJRFESpXI6FlSbaQAIrYDnWasUO5Nu6
-        DhO1YxFqdAHWyCMzCSHz5Wb+fa/6k5zuZe6ZT8lkzJjKWT4vz2bd/GG6nn/NusU2i27z9IITdTNbL+6V
-        wFDevt7bjMj+8qQMKDxuulecqhN1PAMOqD5CHc/gcEDVEep4BscDqo1QxzNQAwrpI9TxDJQ8SR2hjmeg
-        xA9JG6GOZ6Ckj0kZoY5ncLW62Z7fXpwEGn7U8SwiI6DhRx3O5NQIaPhRR7P5bwQ0/KiDNegbAQ0/6lgt
-        1Aho+FGHanI8Ahp+1JHaHI6Ahh91oAUcAQ0/qrwVl6vrugO+f39SUN0EGn5UKVEyDqqbQMOPKiV9AhGx
-        QuQdNPyoUtInEBErRN5Bw48qJRQYiuom0PCjSomScVDdBBp+VCnpE4iIFSLvoOFHlZI+gYhYIfIOGn5U
-        KaHAUFQ3gYYfVUqUjIPqJtDwo0pJn0BErBB5Bw0/qpT0CUTECpF30PCjSgkFhqK6CTT8qFKiZBxUN4GG
-        H1XaEmj4UaUtgYYfVdoSaPhRpS2Bhh9V2hJo+Jl2i09V3IT1/AMafmr9zRph9/HuoOFn/0f3bkTLX2J/
-        a3ez3IbGmDF1Mpn8AWxbRNE70IQNAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHUSURBVGhD7ZkxSgNRGIRTeRwLKwUFSSR7ghzHWq1yguja
+        eg5BrfQQGvQA1jEvzMASZs1j9n+v2oGve8z/TVLuZMyYwlk8LY5m7fxuen+1nrXNJor24/EZJ8pm9tDc
+        KoGhvK7f6oyI/uVJGpBYvbcvOFUm6ngEHFB8hDoeQXdA0RHqeAT7A4qNUMcjUAMS4SPU8QiUPAkdoY5H
+        oMS7hI1QxyNQ0vuEjFDHIzhbXmyOr08OAg0/6ngUOSOg4UcdjuTQCGj4UUej+W8ENPyogyXoGwENP+pY
+        KdQIaPhRh0qyPwIaftSR0nRHQMOPOlADjoCGH1Vei9PledkB378/IahuAg0/qpQoGQfVTaDhR5WSPoEc
+        sUTOO2j4UaWkTyBHLJHzDhp+VCmhwFBUN4GGH1VKlIyD6ibQ8KNKSZ9Ajlgi5x00/KhS0ieQI5bIeQcN
+        P6qUUGAoqptAw48qJUrGQXUTaPhRpaRPIEcskfMOGn5UKekTyBFL5LyDhh9VSigwFNVNoOFHlRIl46C6
+        CTT8qNKaQMOPKq0JNPyo0ppAw48qrQk0/KjSmkDDz2XbfKniKqzmn9DwU+ozaw7TtrmBhp/dh+7tiJr/
+        xO7W9ma6DY0xY8pkMvkDt2BEs7U6xwIAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -167,5 +167,8 @@
   </data>
   <metadata name="itensCriadosTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>214, 56</value>
+  </metadata>
+  <metadata name="printDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>406, 56</value>
   </metadata>
 </root>

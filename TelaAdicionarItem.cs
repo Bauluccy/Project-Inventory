@@ -39,6 +39,7 @@ namespace Project_Inventory
             int quantidade = Int32.Parse(comboQuantidade.Text);
             string descricao = richTextBox1.Text;
 
+
             if (item.Equals("Selecione...") && comboItem.SelectedValue == null || item.Equals("Selecione..."))
             {
                 System.Windows.Forms.MessageBox.Show("Selecione um item antes de adicionar...");
@@ -51,9 +52,10 @@ namespace Project_Inventory
             {
                 int idItem = (int)comboItem.SelectedValue;
                 ControleItems.AdicionarItem(item, quantidade, descricao, idItem);
+                
+                //dataGridView1.Refresh();
                 Dispose();
             }
-
 
         }
     }

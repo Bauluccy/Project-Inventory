@@ -45,6 +45,24 @@ namespace Project_Inventory
             adicionarItem.Save();
         }
 
+        public static void RemoverItem(string item, int quantidade, string descricao, int idItem)
+        {
+            DataContext contexto = new DataContext("Data Source=192.168.0.176;Initial Catalog=dbluciano;User ID=siscob;Password=123456;");
+
+            var removerItem = new ItemInventário()
+            {
+                Context = contexto,
+                ITEM = item,
+                DESCRICAO = descricao,
+                QUANTIDADE = quantidade,
+                ENTRASAI = 0,
+                DATA = DateTime.Now,
+                ID_ITEM = idItem
+            };
+
+            removerItem.Save();
+        }
+
 
 
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DGVPrinterHelper;
 using R9.DataBase;
 using Excel = Microsoft.Office.Interop.Excel;
 
@@ -15,8 +16,6 @@ namespace Project_Inventory
 {
     public partial class TelaLog : Form
     {
-
-        DataTable dt = new DataTable();
         public TelaLog()
         {
             InitializeComponent();
@@ -34,7 +33,16 @@ namespace Project_Inventory
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.log_Inventario_TITableAdapter.FillByTipo(this.dblucianoDataSet1.Log_Inventario_TI, (int) comboTipo.SelectedValue);
+            if (comboTipo.Text.Equals(""))
+            {
+                this.log_Inventario_TITableAdapter.Fill(this.dblucianoDataSet1.Log_Inventario_TI);
+            }
+            else
+            {
+                this.log_Inventario_TITableAdapter.FillByTipo(this.dblucianoDataSet1.Log_Inventario_TI, (int) comboTipo.SelectedValue);
+            }
+
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -107,6 +115,27 @@ namespace Project_Inventory
 
                 MessageBox.Show("Success");
             
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            this.printDocument1.DefaultPageSettings.Landscape = true;
+            DGVPrinter printer = new DGVPrinter();
+
+            printer.PrintPreviewDataGridView(dataGridView1);
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            int entrasai;
+            if (checkBox2.Checked)
+            {
+                entrasai = 0;
+            }
+            else
+            {
+                entrasai = 1;
+            }
         }
     }
 }

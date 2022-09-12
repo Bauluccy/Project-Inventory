@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgruparItensPorID.cs" />
     <Compile Include="ControleItems.cs" />
     <Compile Include="dblucianoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -72,6 +73,29 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dblucianoDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dblucianoDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dblucianoDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dblucianoDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="TelaAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAlterar.Designer.cs">
+      <DependentUpon>TelaAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaDescartes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaDescartes.Designer.cs">
+      <DependentUpon>TelaDescartes.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaLog.cs">
       <SubType>Form</SubType>
@@ -106,6 +130,12 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TelaAlterar.resx">
+      <DependentUpon>TelaAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaDescartes.resx">
+      <DependentUpon>TelaDescartes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaInventarioTI.resx">
       <DependentUpon>TelaInventarioTI.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +203,28 @@
     </None>
     <None Include=".xss">
       <DependentUpon>.xsd</DependentUpon>
+    </None>
+    <None Include="dblucianoDataSet3.xsc">
+      <DependentUpon>dblucianoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dblucianoDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dblucianoDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dblucianoDataSet3.xss">
+      <DependentUpon>dblucianoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dblucianoDataSet5.xsc">
+      <DependentUpon>dblucianoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="dblucianoDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dblucianoDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dblucianoDataSet5.xss">
+      <DependentUpon>dblucianoDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\Items.datasource" />
     <None Include="Properties\Settings.settings">
