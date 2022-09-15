@@ -30,11 +30,11 @@ namespace Project_Inventory
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInventarioTI));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInventarioTI));
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -46,24 +46,25 @@ namespace Project_Inventory
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.itensSeparadosPorIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dblucianoDataSet5 = new Project_Inventory.dblucianoDataSet5();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.itensSeparadosPorIDTableAdapter = new Project_Inventory.dblucianoDataSet5TableAdapters.ItensSeparadosPorIDTableAdapter();
-            this.itensSeparadosPorIDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.iTEMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_ITEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itensSeparadosPorIDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dblucianoDataSet5 = new Project_Inventory.dblucianoDataSet5();
+            this.itensSeparadosPorIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.itensSeparadosPorIDTableAdapter = new Project_Inventory.dblucianoDataSet5TableAdapters.ItensSeparadosPorIDTableAdapter();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,6 +79,7 @@ namespace Project_Inventory
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton3,
             this.toolStripButton1,
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -216,30 +218,6 @@ namespace Project_Inventory
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // itensSeparadosPorIDBindingSource
-            // 
-            this.itensSeparadosPorIDBindingSource.DataMember = "ItensSeparadosPorID";
-            this.itensSeparadosPorIDBindingSource.DataSource = this.bindingSource1;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = this.dblucianoDataSet5;
-            this.bindingSource1.Position = 0;
-            // 
-            // dblucianoDataSet5
-            // 
-            this.dblucianoDataSet5.DataSetName = "dblucianoDataSet5";
-            this.dblucianoDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // itensSeparadosPorIDTableAdapter
-            // 
-            this.itensSeparadosPorIDTableAdapter.ClearBeforeFill = true;
-            // 
-            // itensSeparadosPorIDBindingSource1
-            // 
-            this.itensSeparadosPorIDBindingSource1.DataMember = "ItensSeparadosPorID";
-            this.itensSeparadosPorIDBindingSource1.DataSource = this.bindingSource1;
-            // 
             // iTEMDataGridViewTextBoxColumn
             // 
             this.iTEMDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -264,6 +242,39 @@ namespace Project_Inventory
             this.ID_ITEM.ReadOnly = true;
             this.ID_ITEM.Visible = false;
             // 
+            // itensSeparadosPorIDBindingSource1
+            // 
+            this.itensSeparadosPorIDBindingSource1.DataMember = "ItensSeparadosPorID";
+            this.itensSeparadosPorIDBindingSource1.DataSource = this.bindingSource1;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.dblucianoDataSet5;
+            this.bindingSource1.Position = 0;
+            // 
+            // dblucianoDataSet5
+            // 
+            this.dblucianoDataSet5.DataSetName = "dblucianoDataSet5";
+            this.dblucianoDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // itensSeparadosPorIDBindingSource
+            // 
+            this.itensSeparadosPorIDBindingSource.DataMember = "ItensSeparadosPorID";
+            this.itensSeparadosPorIDBindingSource.DataSource = this.bindingSource1;
+            // 
+            // itensSeparadosPorIDTableAdapter
+            // 
+            this.itensSeparadosPorIDTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "toolStripButton3";
+            // 
             // TelaInventarioTI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,10 +295,10 @@ namespace Project_Inventory
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,6 +324,7 @@ namespace Project_Inventory
         private System.Windows.Forms.DataGridViewTextBoxColumn iTEMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qUANTIDADEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_ITEM;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }
 

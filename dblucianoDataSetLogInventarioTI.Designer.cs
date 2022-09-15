@@ -20,9 +20,9 @@ namespace Project_Inventory {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dblucianoDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dblucianoDataSetLogInventarioTI")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dblucianoDataSet1 : global::System.Data.DataSet {
+    public partial class dblucianoDataSetLogInventarioTI : global::System.Data.DataSet {
         
         private Log_Inventario_TIDataTable tableLog_Inventario_TI;
         
@@ -30,7 +30,7 @@ namespace Project_Inventory {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public dblucianoDataSet1() {
+        public dblucianoDataSetLogInventarioTI() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Project_Inventory {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected dblucianoDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dblucianoDataSetLogInventarioTI(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Project_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dblucianoDataSet1 cln = ((dblucianoDataSet1)(base.Clone()));
+            dblucianoDataSetLogInventarioTI cln = ((dblucianoDataSetLogInventarioTI)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Project_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dblucianoDataSet1";
+            this.DataSetName = "dblucianoDataSetLogInventarioTI";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dblucianoDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/dblucianoDataSetLogInventarioTI.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableLog_Inventario_TI = new Log_Inventario_TIDataTable();
@@ -225,7 +225,7 @@ namespace Project_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dblucianoDataSet1 ds = new dblucianoDataSet1();
+            dblucianoDataSetLogInventarioTI ds = new dblucianoDataSetLogInventarioTI();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -487,8 +487,10 @@ namespace Project_Inventory {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = 1;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnITEM.AllowDBNull = false;
                 this.columnITEM.MaxLength = 255;
@@ -564,7 +566,7 @@ namespace Project_Inventory {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dblucianoDataSet1 ds = new dblucianoDataSet1();
+                dblucianoDataSetLogInventarioTI ds = new dblucianoDataSetLogInventarioTI();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -767,7 +769,7 @@ namespace Project_Inventory {
         }
     }
 }
-namespace Project_Inventory.dblucianoDataSet1TableAdapters {
+namespace Project_Inventory.dblucianoDataSetLogInventarioTITableAdapters {
     
     
     /// <summary>
@@ -901,7 +903,7 @@ namespace Project_Inventory.dblucianoDataSet1TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Log_Inventario_TI] WHERE (([ID] = @Original_ID) AND ([ITEM] = @Original_ITEM) AND ((@IsNull_DESCRICAO = 1 AND [DESCRICAO] IS NULL) OR ([DESCRICAO] = @Original_DESCRICAO)) AND ([QUANTIDADE] = @Original_QUANTIDADE) AND ([ENTRASAI] = @Original_ENTRASAI) AND ([DATA] = @Original_DATA) AND ([ID_ITEM] = @Original_ID_ITEM))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Log_Inventario_TI] WHERE (([ID] = @Original_ID) AND ([ITEM] = @Original_ITEM) AND ((@IsNull_DESCRICAO = 1 AND [DESCRICAO] IS NULL) OR ([DESCRICAO] = @Original_DESCRICAO)) AND ([QUANTIDADE] = @Original_QUANTIDADE) AND ([ENTRASAI] = @Original_ENTRASAI) AND ([DATA] = @Original_DATA) AND ([ID_ITEM] = @Original_ID_ITEM))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ITEM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -913,10 +915,9 @@ namespace Project_Inventory.dblucianoDataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_ITEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Log_Inventario_TI] ([ID], [ITEM], [DESCRICAO], [QUANTIDADE], [ENTRASAI], [DATA], [ID_ITEM]) VALUES (@ID, @ITEM, @DESCRICAO, @QUANTIDADE, @ENTRASAI, @DATA, @ID_ITEM);
-SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventario_TI WHERE (ID = @ID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Log_Inventario_TI] ([ITEM], [DESCRICAO], [QUANTIDADE], [ENTRASAI], [DATA], [ID_ITEM]) VALUES (@ITEM, @DESCRICAO, @QUANTIDADE, @ENTRASAI, @DATA, @ID_ITEM);
+SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventario_TI WHERE (ID = SCOPE_IDENTITY()) ORDER BY ID DESC";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ITEM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESCRICAO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCRICAO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QUANTIDADE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QUANTIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -925,10 +926,9 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_ITEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Log_Inventario_TI] SET [ID] = @ID, [ITEM] = @ITEM, [DESCRICAO] = @DESCRICAO, [QUANTIDADE] = @QUANTIDADE, [ENTRASAI] = @ENTRASAI, [DATA] = @DATA, [ID_ITEM] = @ID_ITEM WHERE (([ID] = @Original_ID) AND ([ITEM] = @Original_ITEM) AND ((@IsNull_DESCRICAO = 1 AND [DESCRICAO] IS NULL) OR ([DESCRICAO] = @Original_DESCRICAO)) AND ([QUANTIDADE] = @Original_QUANTIDADE) AND ([ENTRASAI] = @Original_ENTRASAI) AND ([DATA] = @Original_DATA) AND ([ID_ITEM] = @Original_ID_ITEM));
-SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventario_TI WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Log_Inventario_TI] SET [ITEM] = @ITEM, [DESCRICAO] = @DESCRICAO, [QUANTIDADE] = @QUANTIDADE, [ENTRASAI] = @ENTRASAI, [DATA] = @DATA, [ID_ITEM] = @ID_ITEM WHERE (([ID] = @Original_ID) AND ([ITEM] = @Original_ITEM) AND ((@IsNull_DESCRICAO = 1 AND [DESCRICAO] IS NULL) OR ([DESCRICAO] = @Original_DESCRICAO)) AND ([QUANTIDADE] = @Original_QUANTIDADE) AND ([ENTRASAI] = @Original_ENTRASAI) AND ([DATA] = @Original_DATA) AND ([ID_ITEM] = @Original_ID_ITEM));
+SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventario_TI WHERE (ID = @ID) ORDER BY ID DESC";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ITEM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESCRICAO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCRICAO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QUANTIDADE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QUANTIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -943,6 +943,7 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ENTRASAI", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTRASAI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_ITEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -955,25 +956,69 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[8];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM\r\nFROM     " +
-                "       Log_Inventario_TI";
+            this._commandCollection[0].CommandText = "SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM dbo.Log_Inve" +
+                "ntario_TI ORDER BY ID DESC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT DATA, DESCRICAO, ENTRASAI, ID_ITEM, ITEM, QUANTIDADE FROM Log_Inventario_T" +
-                "I WHERE (ID_ITEM = @IdTipo)";
+            this._commandCollection[1].CommandText = "SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM dbo.Log_Inve" +
+                "ntario_TI WHERE ENTRASAI = 0 ORDER BY ID DESC";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdTipo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM dbo.Log_Inve" +
+                "ntario_TI WHERE ENTRASAI = 0 AND DATA BETWEEN @DataInicio AND @DataFinal ORDER B" +
+                "Y ID DESC";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM dbo.Log_Inve" +
+                "ntario_TI WHERE ENTRASAI = 0 AND DATA BETWEEN @DataInicio AND @DataFinal AND ID_" +
+                "ITEM  = @IdAlvo ORDER BY ID DESC";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAlvo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM dbo.Log_Inve" +
+                "ntario_TI WHERE ENTRASAI = 0 AND ID_ITEM  = @IdAlvo ORDER BY ID DESC";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAlvo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM dbo.Log_Inve" +
+                "ntario_TI WHERE (DATA BETWEEN @DataInicio AND @DataFinal) ORDER BY ID DESC";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "SELECT DATA, DESCRICAO, ENTRASAI, ID, ID_ITEM, ITEM, QUANTIDADE FROM Log_Inventar" +
+                "io_TI WHERE (ID_ITEM = @IdAlvo) ORDER BY ID DESC";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAlvo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = "SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM dbo.Log_Inve" +
+                "ntario_TI WHERE ID_ITEM = @IdAlvo AND (DATA BETWEEN @DataInicio AND @DataFinal) " +
+                "ORDER BY ID DESC";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAlvo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ITEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dblucianoDataSet1.Log_Inventario_TIDataTable dataTable) {
+        public virtual int Fill(dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -986,9 +1031,9 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dblucianoDataSet1.Log_Inventario_TIDataTable GetData() {
+        public virtual dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dblucianoDataSet1.Log_Inventario_TIDataTable dataTable = new dblucianoDataSet1.Log_Inventario_TIDataTable();
+            dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable = new dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -997,9 +1042,8 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByTipo(dblucianoDataSet1.Log_Inventario_TIDataTable dataTable, int IdTipo) {
+        public virtual int FillByDescarte(dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdTipo));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1011,10 +1055,9 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual dblucianoDataSet1.Log_Inventario_TIDataTable GetDataByTipo(int IdTipo) {
+        public virtual dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable GetDataByDescarte() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdTipo));
-            dblucianoDataSet1.Log_Inventario_TIDataTable dataTable = new dblucianoDataSet1.Log_Inventario_TIDataTable();
+            dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable = new dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1022,14 +1065,182 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dblucianoDataSet1.Log_Inventario_TIDataTable dataTable) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByDescarteSemTipoPorData(dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable, System.DateTime DataInicio, System.DateTime DataFinal) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(DataInicio));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(DataFinal));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable GetDataByDescarteSemTipoPorData(System.DateTime DataInicio, System.DateTime DataFinal) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(DataInicio));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(DataFinal));
+            dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable = new dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByDescarteTipoPorData(dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable, System.DateTime DataInicio, System.DateTime DataFinal, int IdAlvo) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(DataInicio));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(DataFinal));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(IdAlvo));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable GetDataByDescarteTipoPorData(System.DateTime DataInicio, System.DateTime DataFinal, int IdAlvo) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(DataInicio));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(DataFinal));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(IdAlvo));
+            dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable = new dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByDescarteTipoSemData(dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable, int IdAlvo) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdAlvo));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable GetDataByDescarteTipoSemData(int IdAlvo) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdAlvo));
+            dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable = new dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByLogPorData(dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable, System.DateTime DataInicio, System.DateTime DataFinal) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(DataInicio));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(DataFinal));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable GetDataByLogPorData(System.DateTime DataInicio, System.DateTime DataFinal) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(DataInicio));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(DataFinal));
+            dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable = new dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByTipo(dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable, int IdAlvo) {
+            this.Adapter.SelectCommand = this.CommandCollection[6];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdAlvo));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable GetDataByTipo(int IdAlvo) {
+            this.Adapter.SelectCommand = this.CommandCollection[6];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdAlvo));
+            dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable = new dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByTipoPorData(dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable, int IdAlvo, System.DateTime DataInicio, System.DateTime DataFinal) {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdAlvo));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(DataInicio));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(DataFinal));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable GetDataByTipoPorData(int IdAlvo, System.DateTime DataInicio, System.DateTime DataFinal) {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdAlvo));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(DataInicio));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(DataFinal));
+            dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable = new dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dblucianoDataSetLogInventarioTI.Log_Inventario_TIDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dblucianoDataSet1 dataSet) {
+        public virtual int Update(dblucianoDataSetLogInventarioTI dataSet) {
             return this.Adapter.Update(dataSet, "Log_Inventario_TI");
         }
         
@@ -1092,24 +1303,23 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, string ITEM, string DESCRICAO, int QUANTIDADE, int ENTRASAI, System.DateTime DATA, int ID_ITEM) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
+        public virtual int Insert(string ITEM, string DESCRICAO, int QUANTIDADE, int ENTRASAI, System.DateTime DATA, int ID_ITEM) {
             if ((ITEM == null)) {
                 throw new global::System.ArgumentNullException("ITEM");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ITEM));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ITEM));
             }
             if ((DESCRICAO == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(DESCRICAO));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DESCRICAO));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(QUANTIDADE));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(ENTRASAI));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(DATA));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(ID_ITEM));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(QUANTIDADE));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(ENTRASAI));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(DATA));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(ID_ITEM));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1130,43 +1340,43 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID, string ITEM, string DESCRICAO, int QUANTIDADE, int ENTRASAI, System.DateTime DATA, int ID_ITEM, int Original_ID, string Original_ITEM, string Original_DESCRICAO, int Original_QUANTIDADE, int Original_ENTRASAI, System.DateTime Original_DATA, int Original_ID_ITEM) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
+        public virtual int Update(string ITEM, string DESCRICAO, int QUANTIDADE, int ENTRASAI, System.DateTime DATA, int ID_ITEM, int Original_ID, string Original_ITEM, string Original_DESCRICAO, int Original_QUANTIDADE, int Original_ENTRASAI, System.DateTime Original_DATA, int Original_ID_ITEM, int ID) {
             if ((ITEM == null)) {
                 throw new global::System.ArgumentNullException("ITEM");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ITEM));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ITEM));
             }
             if ((DESCRICAO == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(DESCRICAO));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DESCRICAO));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(QUANTIDADE));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ENTRASAI));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(DATA));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(ID_ITEM));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(QUANTIDADE));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(ENTRASAI));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(DATA));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ID_ITEM));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_ID));
             if ((Original_ITEM == null)) {
                 throw new global::System.ArgumentNullException("Original_ITEM");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_ITEM));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_ITEM));
             }
             if ((Original_DESCRICAO == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_DESCRICAO));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_DESCRICAO));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_QUANTIDADE));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_ENTRASAI));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_DATA));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_ID_ITEM));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_QUANTIDADE));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_ENTRASAI));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_DATA));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_ID_ITEM));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1188,7 +1398,7 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string ITEM, string DESCRICAO, int QUANTIDADE, int ENTRASAI, System.DateTime DATA, int ID_ITEM, int Original_ID, string Original_ITEM, string Original_DESCRICAO, int Original_QUANTIDADE, int Original_ENTRASAI, System.DateTime Original_DATA, int Original_ID_ITEM) {
-            return this.Update(Original_ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM, Original_ID, Original_ITEM, Original_DESCRICAO, Original_QUANTIDADE, Original_ENTRASAI, Original_DATA, Original_ID_ITEM);
+            return this.Update(ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM, Original_ID, Original_ITEM, Original_DESCRICAO, Original_QUANTIDADE, Original_ENTRASAI, Original_DATA, Original_ID_ITEM, Original_ID);
         }
     }
     
@@ -1283,7 +1493,7 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(dblucianoDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dblucianoDataSetLogInventarioTI dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._log_Inventario_TITableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Log_Inventario_TI.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1302,7 +1512,7 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(dblucianoDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dblucianoDataSetLogInventarioTI dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._log_Inventario_TITableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Log_Inventario_TI.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1320,7 +1530,7 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(dblucianoDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dblucianoDataSetLogInventarioTI dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._log_Inventario_TITableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Log_Inventario_TI.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1362,7 +1572,7 @@ SELECT ID, ITEM, DESCRICAO, QUANTIDADE, ENTRASAI, DATA, ID_ITEM FROM Log_Inventa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(dblucianoDataSet1 dataSet) {
+        public virtual int UpdateAll(dblucianoDataSetLogInventarioTI dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

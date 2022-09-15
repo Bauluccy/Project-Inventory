@@ -25,10 +25,6 @@ namespace Project_Inventory
             int quantidade = Int32.Parse(valor);
             textBox1.Text = item;
             textBox2.Text = id;
-            //if(quantidade == 0)
-            //{
-            //    comboQNT.Items.Add(0);
-            //}
             carregaCombo(quantidade);
             comboQNT.SelectedIndex = 0;
 
@@ -39,33 +35,28 @@ namespace Project_Inventory
         {
             int resultadoFinal;
             int resultadoAntigo = 0;
+            
 
             for (int i = 0; i < comboQNT.Items.Count; i++)
             {
                 resultadoAntigo = i;
             }
-
-            //if (resultadoAntigo == 1)
-            //{
-            //    resultadoAntigo = 0;
-            //}
+            
+            if (comboQNT.Text.Equals(""))
+            {
+                comboQNT.Text = "0";
+            }
 
             int resultadoNovo = Int32.Parse(comboQNT.Text);
-            //if(resultadoAntigo < 0)
-            //{
-            //    resultadoAntigo = 0;
-            //}
-
-
-            //MessageBox.Show("" + resultadoAntigo);
-            //MessageBox.Show("" + resultadoNovo);
-
-
 
             if (resultadoNovo == resultadoAntigo)
             {
                 MessageBox.Show("Nada alterado, Tudo certo por aqui!!!");
                 Dispose();
+            }
+            else if(resultadoNovo > resultadoAntigo){
+                MessageBox.Show("Por favor, insira um valor válido. Você não pode tirar algo que ja não existe!" +
+                    "\nPara adicionar itens USE a opção de ADICIONAR ITEM!!!");
             }
             else
             {
