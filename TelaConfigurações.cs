@@ -22,6 +22,8 @@ namespace Project_Inventory
             DateTime dataDeHoje = DateTime.Today;
 
             DateTime primeiroDiaDoMes = new DateTime(dataDeHoje.Year, dataDeHoje.Month, 1);
+
+            Dispose();
         }
     }
 }

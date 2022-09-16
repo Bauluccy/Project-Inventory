@@ -111,12 +111,12 @@ namespace Project_Inventory
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var x = dataGridView1.CurrentCellAddress.X;
-            var item = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            var valor = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            var id = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            string id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            string item = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            string quantidade = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
 
-            TelaAlterar telaAlterar = new TelaAlterar(item,valor,id);
+            TelaAlterar telaAlterar = new TelaAlterar(item,quantidade,id);
             telaAlterar.Show();
 
         }
@@ -125,6 +125,12 @@ namespace Project_Inventory
         {
             TelaDescartes telaDescartes = new TelaDescartes();
             telaDescartes.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            TelaConfigurações telaconfig = new TelaConfigurações();
+            telaconfig.Show();
         }
     }
     

@@ -286,6 +286,7 @@ namespace Project_Inventory
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Visible = false;
             this.iDDataGridViewTextBoxColumn.Width = 75;
             // 
             // iTEMDataGridViewTextBoxColumn
@@ -339,6 +340,7 @@ namespace Project_Inventory
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaDescartes";
             this.Text = "Tela Descartes";
             this.Activated += new System.EventHandler(this.TelaDescartes_Activated);

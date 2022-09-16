@@ -29,6 +29,7 @@ namespace Project_Inventory
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAlterar));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txDesc = new System.Windows.Forms.RichTextBox();
@@ -132,6 +133,7 @@ namespace Project_Inventory
             this.Controls.Add(this.txDesc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaAlterar";
             this.Text = "Alterar Item";
             this.Load += new System.EventHandler(this.TelaAlterar_Load);

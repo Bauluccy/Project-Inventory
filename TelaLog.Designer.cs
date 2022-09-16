@@ -46,6 +46,7 @@ namespace Project_Inventory
             this.dblucianoDataSetLogInventarioTI = new Project_Inventory.dblucianoDataSetLogInventarioTI();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.checkBoxDescarte = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@ namespace Project_Inventory
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.log_Inventario_TITableAdapter1 = new Project_Inventory.dblucianoDataSetLogInventarioTITableAdapters.Log_Inventario_TITableAdapter();
             this.itensCriadosTableAdapter = new Project_Inventory.dblucianoDataSetItensCriadosTableAdapters.ItensCriadosTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logInventarioTIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTabelaLog)).BeginInit();
@@ -212,6 +212,16 @@ namespace Project_Inventory
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(803, 30);
             this.panel3.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Filtrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // checkBoxDescarte
             // 
@@ -386,16 +396,6 @@ namespace Project_Inventory
             // 
             this.itensCriadosTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Filtrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // TelaLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,6 +403,7 @@ namespace Project_Inventory
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(803, 391);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaLog";
             this.Text = " ";
             this.Load += new System.EventHandler(this.TelaLog_Load);

@@ -17,15 +17,14 @@ namespace Project_Inventory
             InitializeComponent();
         }
 
-        public TelaAlterar(string item,string valor, string id)
+        public TelaAlterar(string item,string quantidade, string id)
         {
             InitializeComponent();
 
-            TelaInventarioTI telaInventario = new TelaInventarioTI();
-            int quantidade = Int32.Parse(valor);
+            //int quantidade = ;
             textBox1.Text = item;
             textBox2.Text = id;
-            carregaCombo(quantidade);
+            carregaCombo(int.Parse(quantidade));
             comboQNT.SelectedIndex = 0;
 
         }

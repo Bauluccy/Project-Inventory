@@ -29,6 +29,7 @@ namespace Project_Inventory
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaConfigurações));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxInventarioAutomatico = new System.Windows.Forms.CheckBox();
@@ -92,6 +93,7 @@ namespace Project_Inventory
             this.Controls.Add(this.checkBoxInventarioAutomatico);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaConfigurações";
             this.Text = "Configurações (Ainda não funciona)";
             this.ResumeLayout(false);
