@@ -20,9 +20,9 @@ namespace Project_Inventory {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dblucianoDataSet5")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dblucianoDataSetInventarioTI")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dblucianoDataSet5 : global::System.Data.DataSet {
+    public partial class dblucianoDataSetInventarioTI : global::System.Data.DataSet {
         
         private ItensSeparadosPorIDDataTable tableItensSeparadosPorID;
         
@@ -30,7 +30,7 @@ namespace Project_Inventory {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public dblucianoDataSet5() {
+        public dblucianoDataSetInventarioTI() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Project_Inventory {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected dblucianoDataSet5(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dblucianoDataSetInventarioTI(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Project_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dblucianoDataSet5 cln = ((dblucianoDataSet5)(base.Clone()));
+            dblucianoDataSetInventarioTI cln = ((dblucianoDataSetInventarioTI)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Project_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dblucianoDataSet5";
+            this.DataSetName = "dblucianoDataSetInventarioTI";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dblucianoDataSet5.xsd";
+            this.Namespace = "http://tempuri.org/dblucianoDataSetInventarioTI.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableItensSeparadosPorID = new ItensSeparadosPorIDDataTable();
@@ -225,7 +225,7 @@ namespace Project_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dblucianoDataSet5 ds = new dblucianoDataSet5();
+            dblucianoDataSetInventarioTI ds = new dblucianoDataSetInventarioTI();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -491,7 +491,7 @@ namespace Project_Inventory {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dblucianoDataSet5 ds = new dblucianoDataSet5();
+                dblucianoDataSetInventarioTI ds = new dblucianoDataSetInventarioTI();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -650,7 +650,7 @@ namespace Project_Inventory {
         }
     }
 }
-namespace Project_Inventory.dblucianoDataSet5TableAdapters {
+namespace Project_Inventory.dblucianoDataSetInventarioTITableAdapters {
     
     
     /// <summary>
@@ -793,7 +793,7 @@ namespace Project_Inventory.dblucianoDataSet5TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_ITEM, ITEM, QUANTIDADE FROM dbo.ItensSeparadosPorID";
+            this._commandCollection[0].CommandText = "SELECT ID_ITEM, ITEM, QUANTIDADE FROM dbo.ItensSeparadosPorID ORDER BY ID_ITEM";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -801,7 +801,7 @@ namespace Project_Inventory.dblucianoDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dblucianoDataSet5.ItensSeparadosPorIDDataTable dataTable) {
+        public virtual int Fill(dblucianoDataSetInventarioTI.ItensSeparadosPorIDDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -814,9 +814,9 @@ namespace Project_Inventory.dblucianoDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dblucianoDataSet5.ItensSeparadosPorIDDataTable GetData() {
+        public virtual dblucianoDataSetInventarioTI.ItensSeparadosPorIDDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dblucianoDataSet5.ItensSeparadosPorIDDataTable dataTable = new dblucianoDataSet5.ItensSeparadosPorIDDataTable();
+            dblucianoDataSetInventarioTI.ItensSeparadosPorIDDataTable dataTable = new dblucianoDataSetInventarioTI.ItensSeparadosPorIDDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -890,7 +890,7 @@ namespace Project_Inventory.dblucianoDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(dblucianoDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dblucianoDataSetInventarioTI dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -900,7 +900,7 @@ namespace Project_Inventory.dblucianoDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(dblucianoDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dblucianoDataSetInventarioTI dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -910,7 +910,7 @@ namespace Project_Inventory.dblucianoDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(dblucianoDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dblucianoDataSetInventarioTI dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -944,7 +944,7 @@ namespace Project_Inventory.dblucianoDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(dblucianoDataSet5 dataSet) {
+        public virtual int UpdateAll(dblucianoDataSetInventarioTI dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

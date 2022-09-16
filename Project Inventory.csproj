@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Program Files %28x86%29\SysIT\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -71,11 +86,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dblucianoDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dblucianoDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dblucianoDataSet5.xsd</DependentUpon>
-    </Compile>
     <Compile Include="dblucianoDataSetDescarte.cs">
       <DependentUpon>dblucianoDataSetDescarte.xsd</DependentUpon>
     </Compile>
@@ -83,6 +93,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dblucianoDataSetDescarte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dblucianoDataSetInventarioTI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dblucianoDataSetInventarioTI.xsd</DependentUpon>
     </Compile>
     <Compile Include="dblucianoDataSetItensCriados.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -100,6 +115,12 @@
     </Compile>
     <Compile Include="TelaAlterar.Designer.cs">
       <DependentUpon>TelaAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaConfigurações.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaConfigurações.Designer.cs">
+      <DependentUpon>TelaConfigurações.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaDescartes.cs">
       <SubType>Form</SubType>
@@ -134,14 +155,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelaPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelaPrincipal.Designer.cs">
-      <DependentUpon>TelaPrincipal.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="TelaAlterar.resx">
       <DependentUpon>TelaAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaConfigurações.resx">
+      <DependentUpon>TelaConfigurações.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaDescartes.resx">
       <DependentUpon>TelaDescartes.cs</DependentUpon>
@@ -166,9 +184,6 @@
     </Compile>
     <EmbeddedResource Include="TelaLog.resx">
       <DependentUpon>TelaLog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaPrincipal.resx">
-      <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="dblucianoDataSet.xsc">
       <DependentUpon>dblucianoDataSet.xsd</DependentUpon>
@@ -214,17 +229,6 @@
     <None Include="dblucianoDataSet3.xss">
       <DependentUpon>dblucianoDataSet3.xsd</DependentUpon>
     </None>
-    <None Include="dblucianoDataSet5.xsc">
-      <DependentUpon>dblucianoDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="dblucianoDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dblucianoDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dblucianoDataSet5.xss">
-      <DependentUpon>dblucianoDataSet5.xsd</DependentUpon>
-    </None>
     <None Include="dblucianoDataSetDescarte.xsc">
       <DependentUpon>dblucianoDataSetDescarte.xsd</DependentUpon>
     </None>
@@ -235,6 +239,17 @@
     </None>
     <None Include="dblucianoDataSetDescarte.xss">
       <DependentUpon>dblucianoDataSetDescarte.xsd</DependentUpon>
+    </None>
+    <None Include="dblucianoDataSetInventarioTI.xsc">
+      <DependentUpon>dblucianoDataSetInventarioTI.xsd</DependentUpon>
+    </None>
+    <None Include="dblucianoDataSetInventarioTI.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dblucianoDataSetInventarioTI.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dblucianoDataSetInventarioTI.xss">
+      <DependentUpon>dblucianoDataSetInventarioTI.xsd</DependentUpon>
     </None>
     <None Include="dblucianoDataSetItensCriados.xsc">
       <DependentUpon>dblucianoDataSetItensCriados.xsd</DependentUpon>
@@ -280,6 +295,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InventarioTI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

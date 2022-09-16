@@ -38,8 +38,8 @@ namespace Project_Inventory
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'dblucianoDataSet5.ItensSeparadosPorID'. Você pode movê-la ou removê-la conforme necessário.
-            this.itensSeparadosPorIDTableAdapter.Fill(this.dblucianoDataSet5.ItensSeparadosPorID);
+            // TODO: esta linha de código carrega dados na tabela 'dblucianoDataSetInventarioTI.ItensSeparadosPorID'. Você pode movê-la ou removê-la conforme necessário.
+            this.itensSeparadosPorIDTableAdapter.Fill(this.dblucianoDataSetInventarioTI.ItensSeparadosPorID);
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -105,7 +105,7 @@ namespace Project_Inventory
 
         private void TelaInventarioTI_Activated(object sender, EventArgs e)
         {
-            this.itensSeparadosPorIDTableAdapter.Fill(this.dblucianoDataSet5.ItensSeparadosPorID);
+            this.itensSeparadosPorIDTableAdapter.Fill(this.dblucianoDataSetInventarioTI.ItensSeparadosPorID);
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

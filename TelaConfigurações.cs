@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Project_Inventory
 {
-    public partial class TelaPrincipal : Form
+    public partial class TelaConfigurações : Form
     {
-        public TelaPrincipal()
+        public TelaConfigurações()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DateTime dataDeHoje = DateTime.Today;
+
+            DateTime primeiroDiaDoMes = new DateTime(dataDeHoje.Year, dataDeHoje.Month, 1);
         }
     }
 }

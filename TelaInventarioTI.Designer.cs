@@ -30,13 +30,14 @@ namespace Project_Inventory
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInventarioTI));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInventarioTI));
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -46,24 +47,21 @@ namespace Project_Inventory
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.dblucianoDataSetInventarioTI = new Project_Inventory.dblucianoDataSetInventarioTI();
+            this.itensSeparadosPorIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itensSeparadosPorIDTableAdapter = new Project_Inventory.dblucianoDataSetInventarioTITableAdapters.ItensSeparadosPorIDTableAdapter();
+            this.iDITEMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTEMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_ITEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itensSeparadosPorIDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dblucianoDataSet5 = new Project_Inventory.dblucianoDataSet5();
-            this.itensSeparadosPorIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.itensSeparadosPorIDTableAdapter = new Project_Inventory.dblucianoDataSet5TableAdapters.ItensSeparadosPorIDTableAdapter();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSetInventarioTI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +85,15 @@ namespace Project_Inventory
             this.toolStrip1.Size = new System.Drawing.Size(505, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "toolStripButton3";
             // 
             // toolStripButton1
             // 
@@ -187,10 +194,10 @@ namespace Project_Inventory
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDITEMDataGridViewTextBoxColumn,
             this.iTEMDataGridViewTextBoxColumn,
-            this.qUANTIDADEDataGridViewTextBoxColumn,
-            this.ID_ITEM});
-            this.dataGridView1.DataSource = this.itensSeparadosPorIDBindingSource1;
+            this.qUANTIDADEDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.itensSeparadosPorIDBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,6 +225,33 @@ namespace Project_Inventory
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.dblucianoDataSetInventarioTI;
+            this.bindingSource1.Position = 0;
+            // 
+            // dblucianoDataSetInventarioTI
+            // 
+            this.dblucianoDataSetInventarioTI.DataSetName = "dblucianoDataSetInventarioTI";
+            this.dblucianoDataSetInventarioTI.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // itensSeparadosPorIDBindingSource
+            // 
+            this.itensSeparadosPorIDBindingSource.DataMember = "ItensSeparadosPorID";
+            this.itensSeparadosPorIDBindingSource.DataSource = this.bindingSource1;
+            // 
+            // itensSeparadosPorIDTableAdapter
+            // 
+            this.itensSeparadosPorIDTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDITEMDataGridViewTextBoxColumn
+            // 
+            this.iDITEMDataGridViewTextBoxColumn.DataPropertyName = "ID_ITEM";
+            this.iDITEMDataGridViewTextBoxColumn.HeaderText = "ID_ITEM";
+            this.iDITEMDataGridViewTextBoxColumn.Name = "iDITEMDataGridViewTextBoxColumn";
+            this.iDITEMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDITEMDataGridViewTextBoxColumn.Visible = false;
+            // 
             // iTEMDataGridViewTextBoxColumn
             // 
             this.iTEMDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -232,48 +266,7 @@ namespace Project_Inventory
             this.qUANTIDADEDataGridViewTextBoxColumn.HeaderText = "QNT";
             this.qUANTIDADEDataGridViewTextBoxColumn.Name = "qUANTIDADEDataGridViewTextBoxColumn";
             this.qUANTIDADEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qUANTIDADEDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // ID_ITEM
-            // 
-            this.ID_ITEM.DataPropertyName = "ID_ITEM";
-            this.ID_ITEM.HeaderText = "ID_ITEM";
-            this.ID_ITEM.Name = "ID_ITEM";
-            this.ID_ITEM.ReadOnly = true;
-            this.ID_ITEM.Visible = false;
-            // 
-            // itensSeparadosPorIDBindingSource1
-            // 
-            this.itensSeparadosPorIDBindingSource1.DataMember = "ItensSeparadosPorID";
-            this.itensSeparadosPorIDBindingSource1.DataSource = this.bindingSource1;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = this.dblucianoDataSet5;
-            this.bindingSource1.Position = 0;
-            // 
-            // dblucianoDataSet5
-            // 
-            this.dblucianoDataSet5.DataSetName = "dblucianoDataSet5";
-            this.dblucianoDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // itensSeparadosPorIDBindingSource
-            // 
-            this.itensSeparadosPorIDBindingSource.DataMember = "ItensSeparadosPorID";
-            this.itensSeparadosPorIDBindingSource.DataSource = this.bindingSource1;
-            // 
-            // itensSeparadosPorIDTableAdapter
-            // 
-            this.itensSeparadosPorIDTableAdapter.ClearBeforeFill = true;
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.qUANTIDADEDataGridViewTextBoxColumn.Width = 75;
             // 
             // TelaInventarioTI
             // 
@@ -295,9 +288,8 @@ namespace Project_Inventory
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblucianoDataSetInventarioTI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itensSeparadosPorIDBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -317,14 +309,13 @@ namespace Project_Inventory
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private dblucianoDataSet5 dblucianoDataSet5;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private dblucianoDataSetInventarioTI dblucianoDataSetInventarioTI;
         private System.Windows.Forms.BindingSource itensSeparadosPorIDBindingSource;
-        private dblucianoDataSet5TableAdapters.ItensSeparadosPorIDTableAdapter itensSeparadosPorIDTableAdapter;
-        private System.Windows.Forms.BindingSource itensSeparadosPorIDBindingSource1;
+        private dblucianoDataSetInventarioTITableAdapters.ItensSeparadosPorIDTableAdapter itensSeparadosPorIDTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDITEMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iTEMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qUANTIDADEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_ITEM;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }
 

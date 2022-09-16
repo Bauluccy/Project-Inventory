@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="dblucianoDataSet5" targetNamespace="http://tempuri.org/dblucianoDataSet5.xsd" xmlns:mstns="http://tempuri.org/dblucianoDataSet5.xsd" xmlns="http://tempuri.org/dblucianoDataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="dblucianoDataSetInventarioTI" targetNamespace="http://tempuri.org/dblucianoDataSetInventarioTI.xsd" xmlns:mstns="http://tempuri.org/dblucianoDataSetInventarioTI.xsd" xmlns="http://tempuri.org/dblucianoDataSetInventarioTI.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -9,10 +9,10 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItensSeparadosPorIDTableAdapter" GeneratorDataComponentClassName="ItensSeparadosPorIDTableAdapter" Name="ItensSeparadosPorID" UserDataComponentName="ItensSeparadosPorIDTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dblucianoConnectionString (Settings)" DbObjectName="dbluciano.dbo.ItensSeparadosPorID" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="dblucianoConnectionString (Settings)" DbObjectName="dbluciano.dbo.ItensSeparadosPorID" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID_ITEM, ITEM, QUANTIDADE FROM dbo.ItensSeparadosPorID</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID_ITEM, ITEM, QUANTIDADE FROM dbo.ItensSeparadosPorID ORDER BY ID_ITEM</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -30,10 +30,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dblucianoDataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dblucianoDataSet5" msprop:Generator_UserDSName="dblucianoDataSet5">
+  <xs:element name="dblucianoDataSetInventarioTI" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dblucianoDataSetInventarioTI" msprop:Generator_UserDSName="dblucianoDataSetInventarioTI">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ItensSeparadosPorID" msprop:Generator_TableClassName="ItensSeparadosPorIDDataTable" msprop:Generator_TableVarName="tableItensSeparadosPorID" msprop:Generator_TablePropName="ItensSeparadosPorID" msprop:Generator_RowDeletingName="ItensSeparadosPorIDRowDeleting" msprop:Generator_RowChangingName="ItensSeparadosPorIDRowChanging" msprop:Generator_RowEvHandlerName="ItensSeparadosPorIDRowChangeEventHandler" msprop:Generator_RowDeletedName="ItensSeparadosPorIDRowDeleted" msprop:Generator_UserTableName="ItensSeparadosPorID" msprop:Generator_RowChangedName="ItensSeparadosPorIDRowChanged" msprop:Generator_RowEvArgName="ItensSeparadosPorIDRowChangeEvent" msprop:Generator_RowClassName="ItensSeparadosPorIDRow">
+        <xs:element name="ItensSeparadosPorID" msprop:Generator_TableClassName="ItensSeparadosPorIDDataTable" msprop:Generator_TableVarName="tableItensSeparadosPorID" msprop:Generator_RowChangedName="ItensSeparadosPorIDRowChanged" msprop:Generator_TablePropName="ItensSeparadosPorID" msprop:Generator_RowDeletingName="ItensSeparadosPorIDRowDeleting" msprop:Generator_RowChangingName="ItensSeparadosPorIDRowChanging" msprop:Generator_RowEvHandlerName="ItensSeparadosPorIDRowChangeEventHandler" msprop:Generator_RowDeletedName="ItensSeparadosPorIDRowDeleted" msprop:Generator_RowClassName="ItensSeparadosPorIDRow" msprop:Generator_UserTableName="ItensSeparadosPorID" msprop:Generator_RowEvArgName="ItensSeparadosPorIDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_ITEM" msprop:Generator_ColumnVarNameInTable="columnID_ITEM" msprop:Generator_ColumnPropNameInRow="ID_ITEM" msprop:Generator_ColumnPropNameInTable="ID_ITEMColumn" msprop:Generator_UserColumnName="ID_ITEM" type="xs:int" />
