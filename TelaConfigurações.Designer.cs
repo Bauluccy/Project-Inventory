@@ -30,52 +30,34 @@ namespace Project_Inventory
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaConfigurações));
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxInventarioAutomatico = new System.Windows.Forms.CheckBox();
-            this.checkBoxDescarteAutomatico = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Exportar descarte no inicio do mês";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 13);
+            this.label1.Size = new System.Drawing.Size(227, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Exportar inventario no inicio do mês";
+            this.label1.Text = "Exportar inventario e descarte no inicio do mês";
             // 
             // checkBoxInventarioAutomatico
             // 
             this.checkBoxInventarioAutomatico.AutoSize = true;
-            this.checkBoxInventarioAutomatico.Location = new System.Drawing.Point(193, 9);
+            this.checkBoxInventarioAutomatico.Location = new System.Drawing.Point(245, 8);
             this.checkBoxInventarioAutomatico.Name = "checkBoxInventarioAutomatico";
             this.checkBoxInventarioAutomatico.Size = new System.Drawing.Size(15, 14);
             this.checkBoxInventarioAutomatico.TabIndex = 2;
             this.checkBoxInventarioAutomatico.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxDescarteAutomatico
-            // 
-            this.checkBoxDescarteAutomatico.AutoSize = true;
-            this.checkBoxDescarteAutomatico.Location = new System.Drawing.Point(193, 35);
-            this.checkBoxDescarteAutomatico.Name = "checkBoxDescarteAutomatico";
-            this.checkBoxDescarteAutomatico.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDescarteAutomatico.TabIndex = 3;
-            this.checkBoxDescarteAutomatico.UseVisualStyleBackColor = true;
+            this.checkBoxInventarioAutomatico.CheckedChanged += new System.EventHandler(this.checkBoxInventarioAutomatico_CheckedChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(112, 78);
+            this.button1.Location = new System.Drawing.Point(121, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -87,26 +69,22 @@ namespace Project_Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 113);
+            this.ClientSize = new System.Drawing.Size(352, 72);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBoxDescarteAutomatico);
             this.Controls.Add(this.checkBoxInventarioAutomatico);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaConfigurações";
-            this.Text = "Configurações (Ainda não funciona)";
+            this.Text = "Configurações";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxInventarioAutomatico;
-        private System.Windows.Forms.CheckBox checkBoxDescarteAutomatico;
         private System.Windows.Forms.Button button1;
+        private System.ServiceProcess.ServiceController serviceController1;
     }
 }

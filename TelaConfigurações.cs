@@ -25,5 +25,13 @@ namespace Project_Inventory
 
             Dispose();
         }
+
+        private void checkBoxInventarioAutomatico_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxInventarioAutomatico.Checked)
+            {
+                //process
+            }
+        }
     }
 }

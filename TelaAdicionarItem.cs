@@ -24,7 +24,7 @@ namespace Project_Inventory
             //comboItem.Items.Insert(0, "Selecione...");
             // TODO: esta linha de código carrega dados na tabela 'dblucianoDataSet.ItensCriados'. Você pode movê-la ou removê-la conforme necessário.
             this.itensCriadosTableAdapter.Fill(this.dblucianoDataSet.ItensCriados);
-            if(comboItem.Text.Equals("Teste"))
+            if(comboItem.Text.Equals(""))
             {
                 comboItem.Text = "Selecione...";
             }
@@ -35,21 +35,22 @@ namespace Project_Inventory
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string item = comboItem.Text;
-            int quantidade = Int32.Parse(comboQuantidade.Text);
-            string descricao = richTextBox1.Text;
 
+            string item = comboItem.Text;
 
             if (item.Equals("Selecione...") && comboItem.SelectedValue == null || item.Equals("Selecione..."))
             {
                 System.Windows.Forms.MessageBox.Show("Selecione um item antes de adicionar...");
             }
-            else if (quantidade == 0)
+            else if (comboQuantidade.Text.Equals("") || comboQuantidade.Text.Equals("0"))
             {
                 System.Windows.Forms.MessageBox.Show("Selecione ao menos uma quantidade antes de adicionar...");
             }
             else
             {
+                int quantidade = Int32.Parse(comboQuantidade.Text);
+                string descricao = richTextBox1.Text;
+
                 int idItem = (int)comboItem.SelectedValue;
                 ControleItems.AdicionarItem(item, quantidade, descricao, idItem);
                 

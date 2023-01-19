@@ -1,5 +1,6 @@
 ﻿using DGVPrinterHelper;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,55 +10,119 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
+//using IronXL;
 
 namespace Project_Inventory
 {
     public partial class TelaInventarioTI : Form
     {
-        public TelaInventarioTI()
+
+        #region Form
+            public TelaInventarioTI()
         {
             InitializeComponent();
         }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
+            private void TelaInventarioTI_Activated(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            TelaAdicionarItem telaAdicionarItem = new TelaAdicionarItem();
-            telaAdicionarItem.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            TelaCriarItem telaCriarItem = new TelaCriarItem();
-            telaCriarItem.Show();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'dblucianoDataSetInventarioTI.ItensSeparadosPorID'. Você pode movê-la ou removê-la conforme necessário.
             this.itensSeparadosPorIDTableAdapter.Fill(this.dblucianoDataSetInventarioTI.ItensSeparadosPorID);
         }
-
-        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+            private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.itensSeparadosPorIDTableAdapter.Fill(this.dblucianoDataSetInventarioTI.ItensSeparadosPorID);
         }
+        #endregion
 
-        private void button2_Click(object sender, EventArgs e)
+
+        #region Botoes Centrais
+            private void btAddItem_Click(object sender, EventArgs e)
+             {
+                 TelaAdicionarItem telaAdicionarItem = new TelaAdicionarItem();
+                 telaAdicionarItem.Show();
+             }
+            private void btCreateItem_Click(object sender, EventArgs e)
+            {
+                TelaCriarItem telaCriarItem = new TelaCriarItem();
+                telaCriarItem.Show();
+            }
+            private void btDescarte_Click(object sender, EventArgs e)
+            {
+                TelaDescartes telaDescartes = new TelaDescartes();
+                telaDescartes.Show();
+            }
+            
+            //private void btLog_Click(object sender, EventArgs e)
+            //{
+            //    TelaLog telalog = new TelaLog();
+            //    telalog.Show();
+            //}
+
+        #endregion
+
+        #region Menu de Cima
+
+            private void btConfiguracao_Click(object sender, EventArgs e)
+            {
+                TelaConfigurações telaconfig = new TelaConfigurações();
+                telaconfig.Show();
+            }
+            
+            private void btExportarNovoExcel_Click(object sender, EventArgs e)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            saveFileDialog.Title = "Export";
+            saveFileDialog.Filter = "Arquivo do Excel *.xlsx | *.xlsx";
+            
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    GeraExcel(saveFileDialog.FileName);
+                    MessageBox.Show("Arquivo exportado com sucesso!");
+                }
+            }
+            
+            private void btAlterarExcel_Click(object sender, EventArgs e)
+            {
+            string localarquivo;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Arquivo do Excel *.xlsx | *.xlsx";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                localarquivo = openFileDialog.FileName;
+                EditarExcel(localarquivo);
+            }
+
+            }
+            
+            private void btImprimir_Click(object sender, EventArgs e)
+            {
+                this.printDocument1.DefaultPageSettings.Landscape = true;
+                DGVPrinter printer = new DGVPrinter();
+            
+                printer.PrintPreviewDataGridView(dataGridView1);
+            }
+        #endregion
+
+        #region DataGrid
+            private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+            {
+                var x = dataGridView1.CurrentCellAddress.X;
+                string id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                string item = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                string quantidade = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            
+            
+                TelaAlterar telaAlterar = new TelaAlterar(item, quantidade, id);
+                telaAlterar.Show();
+            
+            }
+        #endregion
+        
+        #region Metodos
+        public void GeraExcel(string localArquivo)
         {
-            TelaLog telalog = new TelaLog();
-            telalog.Show();
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            Excel.Application app;
+            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
             Excel.Workbook workbook;
             Excel.Worksheet worksheet;
             object missValue = System.Reflection.Missing.Value;
@@ -83,55 +148,37 @@ namespace Project_Inventory
                     worksheet.Cells[i + 2, j + 1] = cell.Value;
                 }
             }
-            saveFileDialog.Title = "ExportLogFilter";
-            saveFileDialog.Filter = "Arquivo do Excel *.xlsx | *.xlsx";
-            saveFileDialog.ShowDialog();
 
-            workbook.SaveAs(saveFileDialog.FileName, Excel.XlFileFormat.xlOpenXMLWorkbook, missValue, missValue, missValue, missValue,
+            workbook.SaveAs(localArquivo, Excel.XlFileFormat.xlOpenXMLWorkbook, missValue, missValue, missValue, missValue,
             Excel.XlSaveAsAccessMode.xlExclusive, missValue, missValue, missValue, missValue, missValue);
             workbook.Close(true, missValue, missValue);
             app.Quit();
-
-            MessageBox.Show("Success");
         }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
+            
+        public void EditarExcel(string localarquivo)
         {
-            this.printDocument1.DefaultPageSettings.Landscape = true;
-            DGVPrinter printer = new DGVPrinter();
+            //WorkBook workBook = WorkBook.Load(localarquivo);
+            //WorkSheet cells = workBook.GetWorkSheet(localarquivo);
 
-            printer.PrintPreviewDataGridView(dataGridView1);
+            //for(int x = 0; x < cells.Rows.Count(); x++)
+            //{
+                
+            //    for(int y = 0; y < cells.Columns.Count(); y++)
+            //    {
+            //        if (x == 0 || y == 0)
+            //        {
+            //            continue;
+            //        }
+
+            //        //cells.Rows[x].Columns[y].Value = 
+            //    }
+
+            //}
         }
 
-        private void TelaInventarioTI_Activated(object sender, EventArgs e)
-        {
-            this.itensSeparadosPorIDTableAdapter.Fill(this.dblucianoDataSetInventarioTI.ItensSeparadosPorID);
-        }
+        #endregion
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var x = dataGridView1.CurrentCellAddress.X;
-            string id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            string item = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            string quantidade = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-
-
-            TelaAlterar telaAlterar = new TelaAlterar(item,quantidade,id);
-            telaAlterar.Show();
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            TelaDescartes telaDescartes = new TelaDescartes();
-            telaDescartes.Show();
-        }
-
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-            TelaConfigurações telaconfig = new TelaConfigurações();
-            telaconfig.Show();
-        }
+        
     }
-    
+
 }

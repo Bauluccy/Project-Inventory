@@ -405,7 +405,7 @@ namespace Project_Inventory
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaLog";
-            this.Text = " ";
+            this.Text = " Log";
             this.Load += new System.EventHandler(this.TelaLog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logInventarioTIBindingSource)).EndInit();

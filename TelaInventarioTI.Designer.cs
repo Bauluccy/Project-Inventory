@@ -37,14 +37,14 @@ namespace Project_Inventory
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btConfiguracao = new System.Windows.Forms.ToolStripButton();
+            this.btExportarNovoExcel = new System.Windows.Forms.ToolStripButton();
+            this.btAlterarExcel = new System.Windows.Forms.ToolStripButton();
+            this.btImprimir = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btCreateItem = new System.Windows.Forms.Button();
+            this.btDescarte = new System.Windows.Forms.Button();
+            this.btAddItem = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDITEMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +55,7 @@ namespace Project_Inventory
             this.dblucianoDataSetInventarioTI = new Project_Inventory.dblucianoDataSetInventarioTI();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.itensSeparadosPorIDTableAdapter = new Project_Inventory.dblucianoDataSetInventarioTITableAdapters.ItensSeparadosPorIDTableAdapter();
+            this.process1 = new System.Diagnostics.Process();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,51 +78,61 @@ namespace Project_Inventory
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton3,
-            this.toolStripButton1,
-            this.toolStripButton2});
+            this.btConfiguracao,
+            this.btExportarNovoExcel,
+            this.btAlterarExcel,
+            this.btImprimir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(505, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton3
+            // btConfiguracao
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.btConfiguracao.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btConfiguracao.Image = global::Project_Inventory.Properties.Resources.options;
+            this.btConfiguracao.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btConfiguracao.Name = "btConfiguracao";
+            this.btConfiguracao.Size = new System.Drawing.Size(23, 22);
+            this.btConfiguracao.Text = "toolStripButton3";
+            this.btConfiguracao.Click += new System.EventHandler(this.btConfiguracao_Click);
             // 
-            // toolStripButton1
+            // btExportarNovoExcel
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.btExportarNovoExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btExportarNovoExcel.Image = global::Project_Inventory.Properties.Resources.icons8_google_sheets_48;
+            this.btExportarNovoExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btExportarNovoExcel.Name = "btExportarNovoExcel";
+            this.btExportarNovoExcel.Size = new System.Drawing.Size(23, 22);
+            this.btExportarNovoExcel.Text = "toolStripButton1";
+            this.btExportarNovoExcel.Click += new System.EventHandler(this.btExportarNovoExcel_Click);
             // 
-            // toolStripButton2
+            // btAlterarExcel
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.btAlterarExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btAlterarExcel.Image = global::Project_Inventory.Properties.Resources.edit_sheets2;
+            this.btAlterarExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btAlterarExcel.Name = "btAlterarExcel";
+            this.btAlterarExcel.Size = new System.Drawing.Size(23, 22);
+            this.btAlterarExcel.Text = "toolStripButton4";
+            this.btAlterarExcel.Click += new System.EventHandler(this.btAlterarExcel_Click);
+            // 
+            // btImprimir
+            // 
+            this.btImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btImprimir.Image")));
+            this.btImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btImprimir.Name = "btImprimir";
+            this.btImprimir.Size = new System.Drawing.Size(23, 22);
+            this.btImprimir.Text = "toolStripButton2";
+            this.btImprimir.Click += new System.EventHandler(this.btImprimir_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btCreateItem);
+            this.panel2.Controls.Add(this.btDescarte);
+            this.panel2.Controls.Add(this.btAddItem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 25);
             this.panel2.Name = "panel2";
@@ -129,46 +140,36 @@ namespace Project_Inventory
             this.panel2.Size = new System.Drawing.Size(175, 320);
             this.panel2.TabIndex = 0;
             // 
-            // button3
+            // btCreateItem
             // 
-            this.button3.Location = new System.Drawing.Point(10, 76);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 50);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Criar Novo Item";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btCreateItem.Location = new System.Drawing.Point(10, 76);
+            this.btCreateItem.Name = "btCreateItem";
+            this.btCreateItem.Size = new System.Drawing.Size(155, 50);
+            this.btCreateItem.TabIndex = 8;
+            this.btCreateItem.Text = "Criar Novo Item";
+            this.btCreateItem.UseVisualStyleBackColor = true;
+            this.btCreateItem.Click += new System.EventHandler(this.btCreateItem_Click);
             // 
-            // button4
+            // btDescarte
             // 
-            this.button4.Location = new System.Drawing.Point(10, 142);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(155, 50);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Descarte";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btDescarte.Location = new System.Drawing.Point(10, 142);
+            this.btDescarte.Name = "btDescarte";
+            this.btDescarte.Size = new System.Drawing.Size(155, 50);
+            this.btDescarte.TabIndex = 7;
+            this.btDescarte.Text = "Descarte";
+            this.btDescarte.UseVisualStyleBackColor = true;
+            this.btDescarte.Click += new System.EventHandler(this.btDescarte_Click);
             // 
-            // button2
+            // btAddItem
             // 
-            this.button2.Location = new System.Drawing.Point(10, 208);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 50);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Log";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(10, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 50);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Adicionar Item";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btAddItem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btAddItem.Location = new System.Drawing.Point(10, 10);
+            this.btAddItem.Name = "btAddItem";
+            this.btAddItem.Size = new System.Drawing.Size(155, 50);
+            this.btAddItem.TabIndex = 5;
+            this.btAddItem.Text = "Adicionar Item";
+            this.btAddItem.UseVisualStyleBackColor = true;
+            this.btAddItem.Click += new System.EventHandler(this.btAddItem_Click);
             // 
             // panel3
             // 
@@ -269,6 +270,16 @@ namespace Project_Inventory
             // 
             this.itensSeparadosPorIDTableAdapter.ClearBeforeFill = true;
             // 
+            // process1
+            // 
+            this.process1.StartInfo.Domain = "";
+            this.process1.StartInfo.LoadUserProfile = false;
+            this.process1.StartInfo.Password = null;
+            this.process1.StartInfo.StandardErrorEncoding = null;
+            this.process1.StartInfo.StandardOutputEncoding = null;
+            this.process1.StartInfo.UserName = "";
+            this.process1.SynchronizingObject = this;
+            // 
             // TelaInventarioTI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,23 +312,24 @@ namespace Project_Inventory
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btCreateItem;
+        private System.Windows.Forms.Button btDescarte;
+        private System.Windows.Forms.Button btAddItem;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton btExportarNovoExcel;
+        private System.Windows.Forms.ToolStripButton btImprimir;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton btConfiguracao;
         private dblucianoDataSetInventarioTI dblucianoDataSetInventarioTI;
         private System.Windows.Forms.BindingSource itensSeparadosPorIDBindingSource;
         private dblucianoDataSetInventarioTITableAdapters.ItensSeparadosPorIDTableAdapter itensSeparadosPorIDTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDITEMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iTEMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qUANTIDADEDataGridViewTextBoxColumn;
+        public System.Diagnostics.Process process1;
+        private System.Windows.Forms.ToolStripButton btAlterarExcel;
     }
 }
 

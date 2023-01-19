@@ -84,11 +84,7 @@ namespace Project_Inventory
             [Column]
             public int ID_ITEM { get; set; }
         }
-        
-        
-        
-        
-        
+
         //public string FiltrarItem()
         //{
         //    DataContext contexto = new DataContext("Data Source=192.168.0.176;Initial Catalog=dbluciano;User ID=siscob;Password=123456;");
